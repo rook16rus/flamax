@@ -1,0 +1,48 @@
+.slider-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.15);
+
+    color: var(--heading-color);
+
+    transition: 0.3s background-color, 0.3s color;
+
+    @include mq('custom', 'max', 1024) {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+
+    &:hover {
+      background-color: var(--primary-color);
+      color: #fff;
+    }
+
+    svg {
+      width: 1.5rem;
+      height: 1rem;
+    }
+
+    &.js-prev-slide {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
