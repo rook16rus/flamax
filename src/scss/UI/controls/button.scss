@@ -5,9 +5,15 @@
 
   border-radius: 5rem;
 
-
+  font: var(--text-t3);
+  text-transform: uppercase;
 
   &--big {
+    height: 4.7rem;
+    padding: 0 3rem 0 3.6rem;
+  }
 
+  &--red-bordered {
+    border: 1px solid var(--primary-color);
   }
 }
