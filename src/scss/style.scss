@@ -2,58 +2,44 @@
 /* stylelint-disable no-invalid-position-at-import-rule */
 :root {
   /* Colors */
-  --primary-bg: #F9F9F9;
-  --secondary-bg: #3770EB;
-  --primary-color: #0041F9;
-  --accent-color-1: #90ED7B;
-  --accent-color-2: #7CE4ED;
-  --accent-color-3: #5FB2ED;
-  --accent-opacity-color-1: #D9F5D3;
-  --accent-opacity-color-2: #D4F3F5;
-  --accent-opacity-color-3: #CBE4F5;
-  --accent-opacity-color-4: #BFD0F5;
-  --stroke-color-1: #B3B3B3;
-  --stroke-color-2: #D9D9D9;
-  --stroke-color-3: #7DB1F6;
-  --text-color: #666666;
-  --heading-color: #161616;
-  --button-stroke: #739BF1;
+  --primary-color: #BE3D3D;
+  --secondary-color: #1FB6DE;
+  --black-color: #333333;
+  --grey-color: #C8C8C8;
+  --black-transparent-color: rgba(33, 30, 30, 1);
+  --stroke-black-color: #211E1E;
+  --stroke-grey-color: rgba(0, 0, 0, 0.15);
 
   /* Layout containers */
-  --max-container-width: 148rem;
+  --max-container-width: 120rem;
+  --max-wide-container-width: 160rem;
   --max-narrow-container-width: 110rem;
-  --content-padding: 5rem;
+  --content-padding: 4rem;
 
   /* Font Family */
-  --main-ff: 'Mont', sans-serif;
+  --main-ff: 'Intro Bold', sans-serif;
+  --secondary-ff: 'Intro Book', sans-serif;
 
   /* Font Weight */
-  --semi-bold: 600;
   --regular: 400;
-  --light: 300;
 
   /* Text */
-  --text-t1: var(--regular) 2rem/140% var(--main-ff);
-  --text-t2: var(--semi-bold) 1.8rem/115% var(--main-ff);
-  --text-t3: var(--regular) 1.8rem/140% var(--main-ff);
-  --text-t4: var(--regular) 1.6rem/140% var(--main-ff);
-  --text-t5: var(--semi-bold) 1.4rem/115% var(--main-ff);
-  --text-t6: var(--regular) 1.4rem/125% var(--main-ff);
+  --text-t1: var(--regular) 1.7rem/2.2rem var(--secondary-ff);
+  --text-t2: var(--regular) 1.5rem/1.9rem var(--secondary-ff);
+  --text-t3: var(--regular) 1.2rem/100% var(--secondary-ff);
+  --text-t4: var(--regular) 1rem/3rem var(--secondary-ff);
 
   /* Titles */
-  --title-h0: var(--regular) 13rem/90% var(--main-ff);
-  --title-h1: var(--regular) 8.8rem/100% var(--main-ff);
-  --title-h2: var(--regular) 7rem/120% var(--main-ff);
-  --title-h3: var(--semi-bold) 5.5rem/125% var(--main-ff);
-  --title-h4: var(--regular) 4rem/125% var(--main-ff);
-  --title-h5: var(--semi-bold) 3.2rem/115% var(--main-ff);
-  --title-h6: var(--semi-bold) 2.4rem/115% var(--main-ff);
+  --title-h1: var(--regular) 10rem/90% var(--main-ff);
+  --title-h2: var(--regular) 4.2rem/100% var(--main-ff);
+  --title-h3: var(--regular) 2.8rem/5.3rem var(--main-ff);
+  --title-h4: var(--regular) 2.5rem/110% var(--main-ff);
+  --title-h5: var(--regular) 2rem/110% var(--main-ff);
+  --title-h6: var(--regular) 1.7rem/110% var(--main-ff);
 
   /* Other Typography */
-  --other-1: var(--light) 3rem/80% var(--main-ff);
-  --other-2: var(--regular) 1.4rem/120% var(--main-ff);
-  --other-3: var(--semi-bold) 1.2rem/125% var(--main-ff);
-  --other-4: var(--regular) 0.9rem/115% var(--main-ff);
+  --other-1: var(--regular) 5.6rem/100% var(--secondary-ff);
+  --other-2: var(--regular) 3.2rem/100% var(--secondary-ff);
 }
 
 @include mq('custom', 'max', 1024) {
@@ -62,52 +48,51 @@
     --content-padding: 3rem;
 
     /* Text */
-    --text-t1: var(--regular) 1.8rem/140% var(--main-ff);
-    --text-t3: var(--regular) 1.6rem/140% var(--main-ff);
+    --text-t1: var(--regular) 1.7rem/2.2rem var(--secondary-ff);
+    --text-t2: var(--regular) 1.5rem/1.9rem var(--secondary-ff);
+    --text-t3: var(--regular) 1.2rem/100% var(--secondary-ff);
+    --text-t4: var(--regular) 1rem/3rem var(--secondary-ff);
 
     /* Titles */
-    --title-h0: var(--regular) 8.5rem/90% var(--main-ff);
-    --title-h1: var(--regular) 5.5rem/100% var(--main-ff);
-    --title-h2: var(--regular) 4.2rem/120% var(--main-ff);
-    --title-h3: var(--semi-bold) 3.8rem/125% var(--main-ff);
-    --title-h4: var(--regular) 4.2rem/125% var(--main-ff);
-    --title-h5: var(--semi-bold) 2.6rem/115% var(--main-ff);
-    --title-h6: var(--semi-bold) 1.8rem/115% var(--main-ff);
+    --title-h1: var(--regular) 7.5rem/90% var(--main-ff);
+    --title-h2: var(--regular) 3rem/100% var(--main-ff);
+    --title-h3: var(--regular) 2.2rem/5.3rem var(--main-ff);
+    --title-h4: var(--regular) 2.2rem/110% var(--main-ff);
+    --title-h5: var(--regular) 2.2rem/110% var(--main-ff);
+    --title-h6: var(--regular) 1.5rem/110% var(--main-ff);
 
     /* Other Typography */
-    --other-1: var(--light) 2.3rem/80% var(--main-ff);
+    --other-1: var(--regular) 4.4rem/100% var(--secondary-ff);
+    --other-2: var(--regular) 2.8rem/100% var(--secondary-ff);
   }
 }
 
 @include mq('custom', 'max', 640) {
   :root {
     /* Layout containers */
-    --content-padding: 2rem;
+    --content-padding: 1.8rem;
 
     /* Text */
-    --text-t1: var(--regular) 1.4rem/140% var(--main-ff);
-    --text-t2: var(--semi-bold) 1.6rem/125% var(--main-ff);
-    --text-t3: var(--regular) 1.4rem/125% var(--main-ff);
-    --text-t4: var(--regular) 1.2rem/140% var(--main-ff);
-    --text-t5: var(--semi-bold) 1.2rem/115% var(--main-ff);
-    --text-t6: var(--regular) 1.2rem/125% var(--main-ff);
+    --text-t1: var(--regular) 1.7rem/2.2rem var(--secondary-ff);
+    --text-t2: var(--regular) 1.5rem/1.9rem var(--secondary-ff);
+    --text-t3: var(--regular) 1.2rem/100% var(--secondary-ff);
+    --text-t4: var(--regular) 1rem/3rem var(--secondary-ff);
 
     /* Titles */
-    --title-h0: var(--regular) 4.6rem/90% var(--main-ff);
-    --title-h1: var(--regular) 3rem/100% var(--main-ff);
-    --title-h2: var(--regular) 2.6rem/120% var(--main-ff);
-    --title-h3: var(--semi-bold) 2.4rem/125% var(--main-ff);
-    --title-h4: var(--regular) 2.6rem/125% var(--main-ff);
-    --title-h5: var(--semi-bold) 1.8rem/115% var(--main-ff);
-    --title-h6: var(--semi-bold) 1.4rem/115% var(--main-ff);
+    --title-h1: var(--regular) 4.8rem/90% var(--main-ff);
+    --title-h2: var(--regular) 2rem/115% var(--main-ff);
+    --title-h3: var(--regular) 1.6rem/5.3rem var(--main-ff);
+    --title-h4: var(--regular) 1.6rem/110% var(--main-ff);
+    --title-h5: var(--regular) 1.6rem/110% var(--main-ff);
+    --title-h6: var(--regular) 1.4rem/110% var(--main-ff);
 
     /* Other Typography */
-    --other-1: var(--light) 1.6rem/80% var(--main-ff);
-    --other-2: var(--regular) 1.2rem/120% var(--main-ff);
+    --other-1: var(--regular) 3.2rem/100% var(--secondary-ff);
+    --other-2: var(--regular) 2.4rem/100% var(--secondary-ff);
   }
 }
 
-$minWidth: 360;
+$minWidth: 375;
 $maxWidth: 1680; // Ширина макета
 $base-transition-time: 0.3s;
 $base-transition-easing: ease;
