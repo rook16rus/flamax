@@ -1,3 +1,39 @@
 .slider-navigation {
+  display: flex;
+  justify-content: space-between;
 
+  border-radius: 9rem;
+  overflow: hidden;
+
+  &--white-transparent {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.8rem;
+    height: 4.2rem;
+
+    svg {
+      width: 3.4rem;
+      height: 3.4rem;
+
+      transition: 0.3s opacity;
+    }
+
+    &:first-child {
+      transform: rotate(180deg);
+    }
+
+    &.swiper-button-disabled {
+      cursor: default;
+
+      svg {
+        opacity: 0.5;
+      }
+    }
+  }
 }

@@ -2,14 +2,15 @@
   padding: 2.4rem 0;
 
   &__nav {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
     align-items: center;
   }
 
   &__logo {
+    grid-column: span 1;
     width: 10.6rem;
     height: 4rem;
-    margin-right: 9.4rem;
 
     svg {
       width: 100%;
@@ -20,6 +21,7 @@
   &__menu {
     display: flex;
     margin-right: auto;
+    grid-column: span 5;
   }
 
   &__menu-item {
@@ -27,6 +29,13 @@
 
     font: var(--text-t3);
     text-transform: uppercase;
+  }
+
+  &__right {
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+    grid-column: span 2;
   }
 
   &__phone {

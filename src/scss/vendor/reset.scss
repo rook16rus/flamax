@@ -272,16 +272,6 @@ button.swiper-pagination-bullet {
   color: #FF3D00;
 }
 
-button.swiper-button-disabled{
-  opacity: 0;
-  visibility: hidden;
-
-  &:hover {
-    background-color: transparent;
-    color: var(--heading-color);
-  }
-}
-
 .choices {
   color: var(--heading-color);
 
@@ -536,23 +526,6 @@ button.swiper-button-disabled{
 
 .choices__placeholder {
   opacity: 1;
-}
-
-.swiper-pagination-bullet {
-  transform: scale(1) !important;
-
-  width: 0.8rem;
-  height: 0.8rem;
-  margin: 0 0.3rem !important;
-
-  border: 1px solid var(--stroke-color-2);
-  background-color: transparent;
-  opacity: 1;
-
-  &-active {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-  }
 }
 
 .simplebar-track.simplebar-vertical {

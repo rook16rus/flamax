@@ -1,0 +1,102 @@
+-
+  const introNav = [
+    {
+      text: "все МЕРОПРИЯТИЯ",
+      link: "",
+    },
+    {
+      text: "ПРЕДСТОЯЩИЕ мероприятия",
+      link: "",
+    },
+    {
+      text: "ПРОШЕДШИЕ мероприятия",
+      link: "",
+    },
+    {
+      text: "УЧАСТНИКАМ",
+      link: "",
+    },
+    {
+      text: "КОНТАКТЫ",
+      link: "",
+    },
+  ]
+
+-
+  const introTimer = [
+    {
+      number: "12",
+      desc: "дней",
+    },
+    {
+      number: "8",
+      desc: "часов",
+    },
+    {
+      number: "56",
+      desc: "минут",
+    },
+  ]
+
+-
+  const introMeta = [
+    {
+      icon: "date-icon",
+      text: "14 ОКТЯБРЯ 2023"
+    },
+    {
+      icon: "location-icon",
+      text: "Москва, «Красный Октябрь»"
+    },
+  ]
+
+-
+  const introSlider = [
+    "intro-1.jpg",
+    "intro-1.jpg",
+    "intro-1.jpg",
+  ]
+
+section.intro.page-section.page-section--first
+  .wide-container
+    .intro__wrapper
+      ul.intro__nav
+        for item in introNav
+          li.intro__nav-item
+            a.intro__nav-link(href="#")= item.text
+      .intro__content
+        .intro__content-wrapper
+          .intro__content-left
+            h1.intro__title
+              | FLAMAX BUSINESS
+            h2.intro__subtitle
+              | Живая платформа для общения и поиска деловых партнеров
+            .intro__text
+              p
+                | За 15 лет активной деятельности компания участвовала в десятках отраслевых и строительных мероприятий, а также организовывала социально значимые благотворительные мероприятия. Накопленный опыт аккумулировался в создание собственных оффлайн мероприятий — FLAMAX Business.
+          .intro__card
+            .intro__card-time
+              span.intro__card-time-desc
+                | До начала
+              ul.intro__card-time-list
+                for item in introTimer
+                  li.intro__card-time-item
+                    span.intro__card-time-item-number= item.number
+                    span.intro__card-time-item-desc= item.desc
+            .intro__card-meta
+              for item in introMeta
+                .intro__card-meta-item
+                 +icon-multi(item.icon)
+                 span= item.text
+            h3.intro__card-title
+              | Кондуктометрические и гидростатические датчики уровня воды в резервуарах FLAMAX
+            a.intro__card-link.button.button--medium.button--red(href="#")
+              | Подробнее
+        .intro__slider.swiper
+          .swiper-wrapper
+            for item in introSlider
+              .intro__slide.swiper-slide
+                +pictureLazy(item, "Фото")
+          .intro__slider-navigation
+            +slider-navigation('slider-navigation--white-transparent')
+            .slider-pagination
