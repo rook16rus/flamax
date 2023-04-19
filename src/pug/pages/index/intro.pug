@@ -85,9 +85,7 @@ section.intro.page-section.page-section--first
                     span.intro__card-time-item-desc= item.desc
             .intro__card-meta
               for item in introMeta
-                .intro__card-meta-item
-                 +icon-multi(item.icon)
-                 span= item.text
+                +meta-item(item.icon, item.text)
             h3.intro__card-title
               | Кондуктометрические и гидростатические датчики уровня воды в резервуарах FLAMAX
             a.intro__card-link.button.button--medium.button--red(href="#")

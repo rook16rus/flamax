@@ -1,0 +1,13 @@
+.meta-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.8rem;
+
+  font: var(--text-t3);
+
+  svg {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}

@@ -8,9 +8,14 @@
   font: var(--text-t3);
   text-transform: uppercase;
 
+  &--large {
+    height: 5.9rem;
+    padding: 0 3rem;
+  }
+
   &--big {
     height: 4.7rem;
-    padding: 0 3rem 0 3.6rem;
+    padding: 0 3rem;
   }
 
   &--medium {
@@ -25,5 +30,10 @@
   &--red {
     background-color: var(--primary-color);
     color: #fff;
+  }
+
+  &--bordered {
+    border: 1px solid var(--stroke-black-color);
+    color: var(--black-color);
   }
 }

@@ -10,6 +10,11 @@
     color: #fff;
   }
 
+  &--bordered {
+    border: 1px solid var(--stroke-grey-color);
+    color: var(--black-color);
+  }
+
   &__button {
     display: flex;
     justify-content: center;

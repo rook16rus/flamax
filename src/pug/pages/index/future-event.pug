@@ -1,0 +1,74 @@
+-
+  const futureEvents = [
+    {
+      title: "Адаптация бизнеса к новым возможностям. Опыт лидеров.",
+      text: "24 марта 2021 года, Москва, концертный зал «МИР», Цветной бульвар, 11. Именно здесь начнутся поединки компаний в формате...",
+      meta: [
+        {
+          icon: "date-icon",
+          text: "14 ОКТЯБРЯ 2023",
+        },
+        {
+          icon: "location-icon",
+          text: "Москва, «Красный Октябрь»",
+        },
+      ],
+      img: "future-events-1.jpg"
+    },
+    {
+      title: "Адаптация бизнеса к новым возможностям.",
+      text: "24 марта 2021 года, Москва, концертный зал «МИР», Цветной бульвар, 11.",
+      meta: [
+        {
+          icon: "date-icon",
+          text: "14 ОКТЯБРЯ 2023",
+        },
+        {
+          icon: "location-icon",
+          text: "Москва, «Красный Октябрь»",
+        },
+      ],
+      img: "future-events-2.jpg"
+    },
+    {
+      title: "Адаптация бизнеса к новым возможностям. Опыт лидеров.",
+      text: "24 марта 2021 года, Москва, концертный зал «МИР», Цветной бульвар, 11. Именно здесь начнутся поединки компаний в формате...",
+      meta: [
+        {
+          icon: "date-icon",
+          text: "14 ОКТЯБРЯ 2023",
+        },
+        {
+          icon: "location-icon",
+          text: "Москва, «Красный Октябрь»",
+        },
+      ],
+      img: "future-events-1.jpg"
+    },
+  ]
+
+section.future-event.page-section
+  .container
+    +section-header("Предстоящие мероприятие")
+    .future-event__wrapper.js-double-slider-container
+      .future-event__content
+        .future-event__content-slider.swiper.js-double-slider-thumb
+          .swiper-wrapper
+            for item in futureEvents
+              .future-event__content-slide.swiper-slide
+                h3.future-event__subtitle= item.title
+                .future-event__text
+                  p= item.text
+                .future-event__meta
+                  for it in item.meta
+                    +meta-item(it.icon, it.text)
+                a.future-event__link.button.button--large.button--red(href="#")
+                  | подробнее
+      .future-event__img
+        .future-event__img-slider.swiper.js-double-slider-main
+          .swiper-wrapper
+            for item in futureEvents
+              .future-event__img-slide.swiper-slide
+                +pictureLazy(item.img, "Фото мероприятия")
+      +slider-navigation("slider-navigation--bordered")
+

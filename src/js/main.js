@@ -20,6 +20,7 @@ import inputPlaceholder from "./helpers/inputPlaceholder";
 import customSelects from "./helpers/customSelects";
 import accordions from "./helpers/accordions";
 import introSlider from "./helpers/introSlider";
+import doubleSlider from "./helpers/doubleSlider";
 
 documenReady(() => {
   window.project_API = { };
@@ -40,6 +41,7 @@ documenReady(() => {
   customSelects();
   accordions();
   introSlider();
+  doubleSlider();
 });
 
 document.fonts.ready.then((res) => {
