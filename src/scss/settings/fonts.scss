@@ -1,32 +1,21 @@
 @font-face {
-  font-weight: 300;
-  font-family: 'Mont';
+  font-weight: 400;
+  font-family: 'Intro Book';
   font-style: normal;
   font-display: swap;
   src:
-    local("Mont"),
-    url("../fonts/Mont-Light.woff2") format("woff2"),
-    url("../fonts/Mont-Light.woff") format("woff");
+    local("Intro Book"),
+    url("../fonts/Intro-Book.woff2") format("woff2"),
+    url("../fonts/Intro-Book.woff") format("woff");
 }
 
 @font-face {
   font-weight: 400;
-  font-family: 'Mont';
+  font-family: 'Intro Bold';
   font-style: normal;
   font-display: swap;
   src:
-    local("Mont"),
-    url("../fonts/Mont-Regular.woff2") format("woff2"),
-    url("../fonts/Mont-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-weight: 600;
-  font-family: 'Mont';
-  font-style: normal;
-  font-display: swap;
-  src:
-    local("Mont"),
-    url("../fonts/Mont-SemiBold.woff2") format("woff2"),
-    url("../fonts/Mont-SemiBold.woff") format("woff");
+    local("Intro Book"),
+    url("../fonts/Intro-Bold.woff2") format("woff2"),
+    url("../fonts/Intro-Bold.woff") format("woff");
 }
