@@ -175,36 +175,22 @@ export default function validation() {
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
-        let formData = new FormData(form);
-        const url = form.getAttribute("action");
 
-        const labels = form.querySelectorAll('.js-input-heading');
+        const formData = new FormData(form);
+        const url = form.getAttribute("action");
 
         if ($(form).parsley().isValid()) {
           axios.post(url, formData)
             .then((response) => {
-              if (response.data.ID > 0) {
-                const fileContainer = form.querySelector(".file-upload__text");
-                form.querySelector(".form__btn").classList.remove("disabled");
+              window.project_API.modal.close();
+              window.project_API.modal.onOpen("success");
 
-                if (fileContainer) fileContainer.remove();
-
-                window.ifellow_API.modal.close();
-
-                if (form.dataset.noPhone) {
-                  window.ifellow_API.modal.onOpen("success-2");
-                } else {
-                  window.ifellow_API.modal.onOpen("success");
-                }
-
-                $(form).trigger("reset");
-                labels.forEach(label => label.classList.remove("is-active"));
-              }
+              $(form).trigger("reset");
             })
             .catch((error) => {
               console.log(error.message);
-              window.ifellow_API.modal.close();
-              window.ifellow_API.modal.onOpen("error");
+              window.project_API.modal.close();
+              window.project_API.modal.onOpen("error");
             });
         }
       });

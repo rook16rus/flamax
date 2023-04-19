@@ -21,7 +21,7 @@ import customSelects from "./helpers/customSelects";
 import accordions from "./helpers/accordions";
 
 documenReady(() => {
-  window.ifellow_API = { };
+  window.project_API = { };
 
   lazyIMages();
   initModal();
@@ -46,8 +46,6 @@ document.fonts.ready.then((res) => {
 
 window.addEventListener('load', function () {
   document.body.classList.add('loaded');
-  alignHeights(".news-slider", ".news-card__title", true);
-  alignHeights(".vacancy-list", ".vacancy-list__title", true);
 
   setTimeout(() => {
     document.body.classList.add('animatable')

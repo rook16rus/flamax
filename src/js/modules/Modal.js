@@ -36,6 +36,19 @@ export class Modal {
           this.animation = animation ? animation : 'fade';
           this.speed = speed ? parseInt(speed) : 300;
           this.overlay = overlay ? overlay : "rgba($color: #1e1e1e, $alpha: 60%)";
+
+          if (window.openedModal) {
+            const prevModalId = window.openedModal.dataset.target;
+            const newOpenModal = document.querySelector(`[data-target="${target}"]`);
+            const prevButton = newOpenModal.querySelector('.modal-prev');
+
+            if (prevButton && !clickedElement.classList.contains('modal-prev')) {
+              prevButton.dataset.path = prevModalId;
+            }
+
+            this.close(true);
+          }
+
           this.modalContainer = document.querySelector(`[data-target="${target}"]`);
           this.open(this.modalContainer.closest(".modal"));
           return;
@@ -77,6 +90,9 @@ export class Modal {
     let speed = sped;
     this.animation = animation ? animation : 'fade';
     this.speed = speed ? parseInt(speed) : 300;
+    if (window.openedModal) {
+      this.close();
+    }
     this.modalContainer = document.querySelector(`[data-target="${target}"]`);
     this.open(this.modalContainer.closest(".modal"));
   }
@@ -88,6 +104,7 @@ export class Modal {
     thisModal.style.setProperty('--transition-time', `${this.speed / 1000}s`);
     thisModal.style.backgroundColor = this.overlay;
     thisModal.classList.add('is-open');
+    window.openedModal = this.modalContainer;
     this.disableScroll();
 
     this.modalContainer.classList.add('modal-open');
@@ -115,6 +132,7 @@ export class Modal {
       this.isOpen = false;
       this.focusTrap();
       this.modalContainer = null;
+      window.openedModal = null;
     }
   }
 

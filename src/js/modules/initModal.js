@@ -9,5 +9,5 @@ export default () => {
     },
   });
 
-  window.ifellow_API.modal = modal;
+  window.project_API.modal = modal;
 };
