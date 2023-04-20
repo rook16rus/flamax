@@ -1,0 +1,8 @@
+.useful {
+  &__title {
+    max-width: 61rem;
+    margin-bottom: 7.2rem;
+
+    @extend .section-title;
+  }
+}

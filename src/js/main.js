@@ -21,6 +21,7 @@ import customSelects from "./helpers/customSelects";
 import accordions from "./helpers/accordions";
 import introSlider from "./helpers/introSlider";
 import doubleSlider from "./helpers/doubleSlider";
+import tabs from "./helpers/tabs";
 
 documenReady(() => {
   window.project_API = { };
@@ -42,6 +43,7 @@ documenReady(() => {
   accordions();
   introSlider();
   doubleSlider();
+  tabs();
 });
 
 document.fonts.ready.then((res) => {

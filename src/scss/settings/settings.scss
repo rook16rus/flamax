@@ -400,6 +400,7 @@ a:focus {
   position: relative;
 
   font: var(--title-h2);
+  text-transform: uppercase;
   color: var(--black-color);
 
   &::before {
@@ -413,5 +414,25 @@ a:focus {
     height: 1px;
 
     background-color: rgba(51, 51, 51, 0.2);
+  }
+}
+
+.tab-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: 0.3s;
+
+  &.active {
+    position: static;
+
+    opacity: 1;
+    visibility: visible;
   }
 }

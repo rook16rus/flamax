@@ -1,0 +1,18 @@
+mixin tabs-block(data)
+  .tabs-block.js-tabs-container&attributes(attributes)(data-tabs-like-radio="true")
+    .tabs-block__tabs
+      each item, index in data
+        button.tabs-block__tab.js-tab(class=`${item.active ? 'tab-active' : ''}` data-href=`tabContent${index}`)
+          +icon-multi(item.icon)
+          span= item.title
+    .tabs-block__contents
+      each item, index in data
+        .tabs-block__content.js-tab-content(class=`${item.active ? 'active' : ''}` data-id=`tabContent${index}`)
+          ul.tabs-block__list
+            for it in item.list
+              li.tabs-block__item
+                .tabs-block__item-icon
+                  +icon-multi(it.icon)
+                .tabs-block__item-content
+                  h3.tabs-block__item-title= it.title
+                  p.tabs-block__item-text= it.text
