@@ -1,0 +1,32 @@
+-
+  const footerMenu = [
+    {text: "© flamaxc.2021"},
+    {text: "Политика обработки персональных данных"},
+    {text: "Реквизиты"},
+    {text: "Карта сайта"},
+  ]
+
+-
+  const footerSocials = [
+    {img: "socials-1"},
+    {img: "socials-2"},
+    {img: "socials-3"},
+    {img: "socials-4"},
+  ]
+
+footer.footer
+  .wide-container
+    .footer__wrapper
+      ul.footer__menu
+        for item in footerMenu
+          li.footer__menu-item
+            a.footer__menu-link(href="#")= item.text
+      .footer__socials
+        for item in footerSocials
+          a.footer__social(href="#")
+            +icon-multi(item.img)
+      span.footer__desc
+        | Мы – ЗАЧЕСТНЫЙ БИЗНЕС
+      .footer__developer
+        span Создание сайта
+        +icon-multi('mark-weber')
