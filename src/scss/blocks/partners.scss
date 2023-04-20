@@ -1,0 +1,39 @@
+.partners {
+  &__title {
+    @extend .section-title;
+
+    margin-bottom: 7.7rem;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid #D6D6D6;
+    border-left: 1px solid #D6D6D6;
+  }
+
+  &__item-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 22rem;
+
+    border-bottom: 1px solid #D6D6D6;
+    border-right: 1px solid #D6D6D6;
+
+    color: var(--black-color);
+
+    transition: 0.3s;
+
+    &:hover {
+      background-color: #EEF1F5;
+      color: var(--secondary-color);
+    }
+
+    svg {
+      max-height: 55%;
+      max-width: 55%;
+    }
+  }
+}

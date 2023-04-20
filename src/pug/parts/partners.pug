@@ -1,0 +1,20 @@
+-
+  const partners = [
+    "partners-1",
+    "partners-2",
+    "partners-3",
+    "partners-4",
+    "partners-5",
+    "partners-6",
+    "partners-7",
+  ]
+
+section.partners.page-section
+  .container
+    h2.partners__title
+      | ПАРТНЕРЫ
+    ul.partners__list
+      for item in partners
+        li.partners__item
+          a.partners__item-link(href="#")
+            +icon-multi(item)
