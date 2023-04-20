@@ -1,46 +1,50 @@
 import loadApi from "./loadApi";
 
-export default function yandexMap() {
-    let map = document.querySelector('#map');
-    if (!map) return;
+export default function contactsMap() {
+  let map = document.querySelector('#map');
+  if (!map) return;
 
-    const urlElement = document.querySelector('.js-map-url');
-    if (!urlElement) return;
+  const url = `https://api-maps.yandex.ru/2.1/?apikey=${map.dataset.apiKey}&lang=ru_RU`;
+  loadApi('yandex', url, () => {
+    ymaps.ready(init);
+  })
 
-    const url = `https://api-maps.yandex.ru/2.1/?apikey=${urlElement.dataset.api}&lang=ru_RU`;
-    loadApi('yandex', url, () => {
-        ymaps.ready(init);
-    })
+  function init() {
+    const mapElement = document.querySelector('#map');
+    const zoom = mapElement.dataset.zoom;
+    const marker = mapElement.dataset.marker;
+    const coords = mapElement.dataset.coordinates.split(',');
+    const hint = mapElement.dataset.hint;
 
-    function init() {
-        const mapElement = document.querySelector('#map');
-        const zoom = mapElement.dataset.zoom;
-        const marker = mapElement.dataset.marker;
-        const coords = mapElement.dataset.coordinates.split(',');
+    map = new ymaps.Map('map', {
+      center: [+coords[0], +coords[1] + 0.0002],
+      zoom
+    }, {
+      searchControlProvider: "yandex#search",
+      suppressMapOpenBlock: true
+    });
 
-        map = new ymaps.Map('map', {
-            center: [...coords],
-            zoom
-        });
+    map.controls.remove('geolocationControl'); // удаляем геолокацию
+    map.controls.remove('searchControl'); // удаляем поиск
+    map.controls.remove('trafficControl'); // удаляем контроль трафика
+    map.controls.remove('typeSelector'); // удаляем тип
+    map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+    map.controls.remove('rulerControl'); // удаляем контрол правил
+    map.controls.remove('zoomControl'); // удаляем контрол зума
 
-        map.controls.remove('geolocationControl'); // удаляем геолокацию
-        map.controls.remove('searchControl'); // удаляем поиск
-        map.controls.remove('trafficControl'); // удаляем контроль трафика
-        map.controls.remove('typeSelector'); // удаляем тип
-        map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-        map.controls.remove('rulerControl'); // удаляем контрол правил
+    addMarker([...coords], map, marker, hint);
+  }
 
-        addMarker([55.68678156906752,51.39040749999995], map, marker);
-    }
+  function addMarker(coords, map, markerIcon, hint) {
+    const marker = new ymaps.Placemark(coords, {
+      hintContent: hint
+    }, {
+      iconLayout: 'default#image',
+      iconImageHref: markerIcon,
+      iconImageSize: [44, 44],
+      iconImageOffset: [-22, -22]
+    });
 
-    function addMarker(coords, map, markerIcon) {
-        const marker = new ymaps.Placemark(coords, {}, {
-            iconLayout: 'default#image',
-            iconImageHref: markerIcon,
-            iconImageSize: [60, 77],
-            iconImageOffset: [-30, -77]
-        });
-
-        map.geoObjects.add(marker);
-    }
+    map.geoObjects.add(marker);
+  }
 }

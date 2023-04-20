@@ -1,0 +1,56 @@
+.contacts {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: center;
+  }
+
+  &__content {
+    grid-column: 2 / 5;
+  }
+
+  &__title {
+    @extend .section-title;
+
+    margin-bottom: 4.8rem;
+  }
+
+  &__text {
+    max-width: 42.2rem;
+    margin-bottom: 4.2rem;
+
+    font: var(--text-t1);
+  }
+
+  &__phone {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.2rem;
+  }
+
+  &__phone-link {
+    font: var(--other-2);
+  }
+
+  &__phone-advance {
+    margin-left: 1.2rem;
+    font: var(--text-t3);
+  }
+
+  &__email {
+    display: flex;
+    margin-bottom: 5.6rem;
+
+    font: var(--text-t1);
+    text-decoration: underline;
+    color: var(--primary-color);
+    text-underline-offset: 0.5rem
+  }
+
+  &__map {
+    grid-column: span 4;
+    height: 52.2rem;
+
+    background-color: var(--grey-color);
+  }
+}
