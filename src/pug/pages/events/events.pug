@@ -1,0 +1,25 @@
+-
+  const events = [
+    {
+      img: "event-1.jpg",
+    }
+  ]
+
+section.events.page-section
+  .wide-container
+    header.events__header
+      +page-navigation()
+    .events__body
+      +navigation-list()
+      .events__content
+        +events-list(events)
+        .events__pagination
+          .events__pagination-numbers
+            - var i = 1;
+            while i < 11
+              a.events__pagination-number(href="#")= i++
+          .events__pagination-arrows
+            button.events__pagination-arrow
+              +icon-multi('slider-arrow')
+            button.events__pagination-arrow
+              +icon-multi('slider-arrow')
