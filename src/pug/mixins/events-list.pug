@@ -1,0 +1,16 @@
+mixin events-list(data, mod)
+  ul.events-list&attributes(attributes)(class=mod)
+    for item in data
+      li.events-list__item
+        .events-list__item-img
+          .events-list__item-tag.tag.tag--red
+            | завершено
+          +pictureLazy(item.img, "Фото мероприятия")
+        .events-list__item-content
+          .events-list__item-meta
+            +meta-item("date-icon", "14 ОКТЯБРЯ 2023")
+            +meta-item("location-icon", "Москва, «Красный Октябрь»")
+          h3.events-list__item-title= item.title
+          p.events-list__item-text= item.text
+        a.events-list__item-link(href="#")
+          +icon-multi('link-icon')
