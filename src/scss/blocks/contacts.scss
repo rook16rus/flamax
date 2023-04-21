@@ -3,16 +3,42 @@
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     align-items: center;
+
+    @include mq('custom', 'max', 1024) {
+      grid-template-columns: 1fr;
+      align-items: stretch;
+      gap: 3.2rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      gap: 2.4rem;
+    }
   }
 
   &__content {
     grid-column: 2 / 5;
+
+    @include mq('custom', 'max', 1024) {
+      grid-column: auto;
+    }
   }
 
   &__title {
     @extend .section-title;
 
     margin-bottom: 4.8rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 3.6rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 2.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 1.6rem;
+    }
   }
 
   &__text {
@@ -20,6 +46,19 @@
     margin-bottom: 4.2rem;
 
     font: var(--text-t1);
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 3.6rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 3rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2.4rem;
+      font-size: 1.3rem;
+    }
   }
 
   &__phone {
@@ -35,6 +74,10 @@
   &__phone-advance {
     margin-left: 1.2rem;
     font: var(--text-t3);
+
+    @include mq('custom', 'max', 640) {
+      font: var(--text-t4);
+    }
   }
 
   &__email {
@@ -44,7 +87,17 @@
     font: var(--text-t1);
     text-decoration: underline;
     color: var(--primary-color);
-    text-underline-offset: 0.5rem
+    text-underline-offset: 0.5rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__path {
+    @include mq('custom', 'max', 1024) {
+      display: none;
+    }
   }
 
   &__map {
@@ -52,5 +105,20 @@
     height: 52.2rem;
 
     background-color: var(--grey-color);
+
+    @include mq('custom', 'max', 1024) {
+      height: 42.9rem;
+      max-width: 80rem;
+      overflow: hidden;
+      grid-column: auto;
+    }
+
+    @include mq('custom', 'max', 768) {
+      height: 33.7rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      height: 24.5rem;
+    }
   }
 }
