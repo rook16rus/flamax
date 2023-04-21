@@ -2,8 +2,17 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 
+  @include mq('custom', 'max', 768) {
+    grid-template-columns: 1fr;
+  }
+
   &__tabs {
     grid-column: span 1;
+
+    @include mq('custom', 'max', 768) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
   &__tab {
@@ -18,10 +27,22 @@
 
     transition: 0.3s;
 
+    @include mq('custom', 'max', 768) {
+      height: 6.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      height: 4.5rem;
+    }
+
     svg {
       width: 3.2rem;
       height: 3.2rem;
       margin-bottom: 0.5rem;
+
+      @include mq('custom', 'max', 768) {
+        display: none;
+      }
     }
 
     &.tab-active {
@@ -40,18 +61,47 @@
 
     padding: 6.4rem;
     background-color: #F3F5F8;
+
+    @include mq('custom', 'max', 1024) {
+      padding: 5.6rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      padding: 3.7rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      padding: 2.4rem;
+    }
   }
 
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4.8rem 6.6rem;
+
+    @include mq('custom', 'max', 1024) {
+      gap: 4.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      gap: 3.2rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
   }
 
   &__item {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 2.4rem;
+
+    @include mq('custom', 'max', 640) {
+      gap: 1.6rem;
+    }
   }
 
   &__item-icon {
@@ -66,15 +116,30 @@
 
     color: var(--primary-color);
 
+
+    @include mq('custom', 'max', 640) {
+      width: 4rem;
+      height: 4rem;
+    }
+
     svg {
       width: 2.8rem;
       height: 2.8rem;
+
+      @include mq('custom', 'max', 640) {
+        width: 2.2rem;
+        height: 2.2rem;
+      }
     }
   }
 
   &__item-title {
     margin-bottom: 1.2rem;
     font: var(--title-h6);
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 0.8rem;
+    }
   }
 
   &__item-text {
