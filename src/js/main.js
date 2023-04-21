@@ -22,6 +22,8 @@ import accordions from "./helpers/accordions";
 import introSlider from "./helpers/introSlider";
 import doubleSlider from "./helpers/doubleSlider";
 import tabs from "./helpers/tabs";
+import header from "./helpers/header";
+import introTopOffset from "./helpers/introTopOffset";
 
 documenReady(() => {
   window.project_API = { };
@@ -44,6 +46,8 @@ documenReady(() => {
   introSlider();
   doubleSlider();
   tabs();
+  header();
+  introTopOffset()
 });
 
 document.fonts.ready.then((res) => {
@@ -59,5 +63,5 @@ window.addEventListener('load', function () {
 });
 
 window.addEventListener('resize', () => {
-
+  introTopOffset();
 })

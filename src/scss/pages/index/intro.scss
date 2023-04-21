@@ -1,8 +1,16 @@
 .intro {
+  @include mq('custom', 'max', 1024) {
+    margin-top: 0;
+  }
+
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     align-items: flex-start;
+
+    @include mq('custom', 'max', 1024) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__nav {
@@ -14,17 +22,42 @@
 
     font: var(--text-t4);
     text-transform: uppercase;
+
+    @include mq('custom', 'max', 1024) {
+      display: none;
+    }
   }
 
   &__content {
     grid-column: span 7;
     max-width: 120rem;
+
+    @include mq('custom', 'max', 1024) {
+      max-width: none;
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__content-wrapper {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     margin-bottom: 5.6rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-top: 4rem;
+      margin-bottom: 0;
+      order: 1;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-top: 3.6rem;
+      grid-template-columns: 1fr;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-top: 3.2rem;
+    }
   }
 
   &__content-left {
@@ -38,6 +71,10 @@
     font: var(--title-h1);
     text-transform: uppercase;
     color: var(--primary-color);
+
+    @include mq('custom', 'max', 768) {
+      margin-top: 0;
+    }
   }
 
   &__subtitle {
@@ -45,6 +82,10 @@
     margin-bottom: 2.4rem;
 
     font: var(--title-h5);
+
+    @include mq('custom', 'max', 640) {
+      nav-banner-image: 1.6rem;
+    }
   }
 
   &__text {
@@ -63,6 +104,10 @@
 
     background: url("../images/intro-card-bg.png") no-repeat center;
     background-size: cover;
+
+    @include mq('custom', 'max', 768) {
+      display: none;
+    }
   }
 
   &__card-time {
@@ -126,11 +171,28 @@
     align-self: flex-start;
   }
 
+  &__slider-container {
+    min-width: 0;
+  }
+
+  &__slider {
+    @include mq('custom', 'max', 1024) {
+      position: relative;
+      left: -3.5rem;
+      width: calc(100% + 7rem);
+    }
+  }
+
   &__slide {
     position: relative;
 
     width: 100%;
     padding-top: 50%;
+
+
+    @include mq('custom', 'max', 640) {
+      padding-top: 81.33%;
+    }
 
     img {
       @extend .fully-filled-el;
@@ -149,5 +211,18 @@
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: 3.2rem;
+
+    @include mq('custom', 'max', 768) {
+      grid-template-columns: 1fr;
+      left: 1.8rem;
+      bottom: 1.8rem;
+      right: 1.8rem;
+    }
+  }
+
+  .slider-navigation {
+    @include mq('custom', 'max', 768) {
+      display: none;
+    }
   }
 }

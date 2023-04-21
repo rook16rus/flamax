@@ -90,11 +90,12 @@ section.intro.page-section.page-section--first
               | Кондуктометрические и гидростатические датчики уровня воды в резервуарах FLAMAX
             a.intro__card-link.button.button--medium.button--red(href="#")
               | Подробнее
-        .intro__slider.swiper
-          .swiper-wrapper
-            for item in introSlider
-              .intro__slide.swiper-slide
-                +pictureLazy(item, "Фото")
-          .intro__slider-navigation
-            +slider-navigation('slider-navigation--white-transparent')
-            .slider-pagination
+        .intro__slider-container
+          .intro__slider.swiper
+            .swiper-wrapper
+              for item in introSlider
+                .intro__slide.swiper-slide
+                  +pictureLazy(item, "Фото")
+            .intro__slider-navigation
+              +slider-navigation('slider-navigation--white-transparent')
+              .slider-pagination
