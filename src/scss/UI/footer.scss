@@ -8,15 +8,66 @@
 
     font: var(--text-t3);
     color: rgba(33, 30, 30, 0.4);
+
+    @include mq('custom', 'max', 1024) {
+      flex-direction: column;
+      align-items: stretch;
+      padding-top: 0;
+      padding-bottom: 4.2rem;
+      border-top: 0;
+    }
+
+    @include mq('custom', 'max', 768) {
+      padding-bottom: 3.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      padding-bottom: 3rem;
+    }
   }
 
   &__menu {
     display: flex;
     margin-left: -4rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-left: -3.5rem;
+      margin-bottom: 0;
+      flex-wrap: wrap;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-left: -3rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-left: -2.4rem;
+    }
   }
 
   &__menu-item {
     margin-left: 4rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-left: 3.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-left: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-left: 2.4rem;
+      margin-bottom: 2.4rem;
+    }
+
+    &:nth-child(2) {
+      @include mq('custom', 'max', 1024) {
+        order: 1;
+      }
+    }
   }
 
   &__socials {
@@ -25,15 +76,42 @@
     gap: 1.6rem;
     margin: 0 15.5rem;
 
+    @include mq('custom', 'max', 1024) {
+      order: -1;
+      margin: 0 0 3.2rem;
+      gap: 2.4rem;
+      display: inline-grid;
+      align-self: flex-start;
+    }
+
     svg {
       width: 1.6rem;
       height: 1.6rem;
+
+      @include mq('custom', 'max', 1024) {
+        width: 2rem;
+        height: 2rem;
+      }
     }
   }
 
   &__desc {
     text-decoration: underline;
     text-underline-offset: 0.3rem;
+    text-decoration-color: rgba(0, 0, 0, 0.1);
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 3.5rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 3rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2.4rem;
+    }
+
   }
 
   &__developer {
@@ -42,13 +120,26 @@
     gap: 0.7rem;
     margin-left: auto;
 
+    @include mq('custom', 'max', 1024) {
+      margin-left: 0;
+      align-self: flex-start;
+    }
+
     span {
       margin-top: 0.3rem;
+
+      @include mq('custom', 'max', 640) {
+        margin-top: 0;
+      }
     }
 
     svg {
       width: 6.4rem;
       height: 2rem;
+
+      @include mq('custom', 'max', 640) {
+        height: 1.6rem;
+      }
     }
   }
 }
