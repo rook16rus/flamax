@@ -4,12 +4,28 @@
   justify-content: space-between;
   margin-bottom: 10rem;
 
+  @include mq('custom', 'max', 1024) {
+    margin-bottom: 7.5rem;
+  }
+
+  @include mq('custom', 'max', 768) {
+    margin-bottom: 5rem;
+  }
+
+  @include mq('custom', 'max', 640) {
+    margin-bottom: 2.4rem;
+  }
+
   &__title {
     @extend .section-title;
 
-    margin-right: 3rem;
+    margin-right: 1rem;
 
     font: var(--title-h2);
     text-transform: uppercase;
+  }
+
+  &__link {
+    flex-shrink: 0;
   }
 }

@@ -13,6 +13,7 @@ export default function doubleSlider() {
       slidesPerView: 1,
       effect: "fade",
       allowTouchMove: false,
+      autoHeight: true,
       fadeEffect: {
         crossFade: true
       },
@@ -27,6 +28,10 @@ export default function doubleSlider() {
         nextEl: container.querySelector('.js-next-slide'),
         prevEl: container.querySelector('.js-prev-slide'),
       },
+      pagination: {
+        type: "bullets",
+        el: container.querySelector('.slider-pagination')
+      }
     })
   })
 }

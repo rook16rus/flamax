@@ -196,6 +196,18 @@ img {
 .page-section {
   margin-bottom: 12.4rem;
 
+  @include mq('custom', 'max', 1024) {
+    margin-bottom: 9.8rem;
+  }
+
+  @include mq('custom', 'max', 768) {
+    margin-bottom: 7.4rem;
+  }
+
+  @include mq('custom', 'max', 640) {
+    margin-bottom: 5rem;
+  }
+
   &--first {
     margin-top: 5rem;
   }
@@ -418,6 +430,18 @@ a:focus {
     height: 1px;
 
     background-color: rgba(51, 51, 51, 0.2);
+
+    @include mq('custom', 'max', 1024) {
+      display: none;
+    }
+
+    @include mq('custom', 'max', 768) {
+
+    }
+
+    @include mq('custom', 'max', 640) {
+
+    }
   }
 }
 

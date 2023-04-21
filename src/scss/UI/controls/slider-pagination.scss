@@ -1,5 +1,6 @@
 .slider-pagination {
   display: flex;
+
   .swiper-pagination-bullet {
     transform: scale(1) !important;
 
@@ -14,6 +15,16 @@
 
     &-active {
       background-color: #fff;
+    }
+  }
+
+  &--black {
+    .swiper-pagination-bullet {
+      background-color: rgba(42, 38, 38, 0.2);
+
+      &-active {
+        background-color: #2A2626;
+      }
     }
   }
 }
