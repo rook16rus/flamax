@@ -189,6 +189,8 @@
     width: 100%;
     padding-top: 50%;
 
+    cursor: pointer;
+    
 
     @include mq('custom', 'max', 640) {
       padding-top: 81.33%;

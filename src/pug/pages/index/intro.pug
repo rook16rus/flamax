@@ -94,7 +94,7 @@ section.intro.page-section.page-section--first
           .intro__slider.swiper
             .swiper-wrapper
               for item in introSlider
-                .intro__slide.swiper-slide
+                .intro__slide.swiper-slide(data-fancybox="intro" data-src=`assets/images/${item}`)
                   +pictureLazy(item, "Фото")
             .intro__slider-navigation
               +slider-navigation('slider-navigation--white-transparent')

@@ -20,10 +20,10 @@ footer.footer
       ul.footer__menu
         for item in footerMenu
           li.footer__menu-item
-            a.footer__menu-link(href="#")= item.text
+            a.footer__menu-link.link(href="#")= item.text
       .footer__socials
         for item in footerSocials
-          a.footer__social(href="#")
+          a.footer__social.link(href="#")
             +icon-multi(item.img)
       span.footer__desc
         | Мы – ЗАЧЕСТНЫЙБИЗНЕС

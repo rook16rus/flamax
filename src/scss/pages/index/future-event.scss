@@ -201,6 +201,8 @@
     z-index: -2;
     transition: 0.3s transform;
 
+    cursor: pointer;
+
     &.swiper-slide {
       transform: scale(0.8);
     }
