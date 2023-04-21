@@ -7,17 +7,21 @@
 
 -
   const eventsNavigation = [
-    {text: "FLAMAX BUSINESS"},
+    {text: "FLAMAX BUSINESS", active: true},
     {text: "ПРОШЕДШИЕ МЕРОПРИЯТИЕ"},
     {text: "ПРОШЕДШИЕ МЕРОПРИЯТИЕ"},
     {text: "УЧАСТНИКАМ"},
     {text: "КОНТАКТЫ"},
   ]
 
-section.events.page-section
+section.events.page-section.js-intro-block
+  header.events__header
+    .wide-container
+      +page-navigation(
+        "ВСЕ МЕРОПРИЯТИЯ",
+        [["Главная", "index.html"],["FLAMAX BUSINESS", "index.html"], ["ВСЕ МЕРОПРИЯТИЯ", "#"]]
+      )
   .wide-container
-    header.events__header
-      +page-navigation()
     .events__body
       +navigation-list(eventsNavigation)
       .events__content
