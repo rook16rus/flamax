@@ -1,8 +1,9 @@
 -
   const introNav = [
     {
-      text: "все МЕРОПРИЯТИЯ",
+      text: "FLAMAX BUSINESS",
       link: "",
+      active: true,
     },
     {
       text: "ПРЕДСТОЯЩИЕ мероприятия",
@@ -60,10 +61,7 @@
 section.intro.page-section.page-section--first
   .wide-container
     .intro__wrapper
-      ul.intro__nav
-        for item in introNav
-          li.intro__nav-item
-            a.intro__nav-link(href="#")= item.text
+      +navigation-list(introNav)
       .intro__content
         .intro__content-wrapper
           .intro__content-left

@@ -21,7 +21,7 @@
     z-index: -1;
     transform: translate(-50%, 0);
 
-    width: 20rem;
+    width: 150%;
     height: 10rem;
 
     border-radius: 50rem;
@@ -30,12 +30,14 @@
     transition: 0.3s ease all;
   }
 
-  &:hover {
-    color: #fff;
+  @include mq('custom', 'min', 1025) {
+    &:hover {
+      color: #fff;
 
-    &::before {
-      transform: translate(-50%,-7rem);
-      z-index: -2;
+      &::before {
+        transform: translate(-50%,-7rem);
+        z-index: -2;
+      }
     }
   }
 

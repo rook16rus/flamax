@@ -13,15 +13,9 @@
     }
   }
 
-  &__nav {
+  .navigation-list {
     grid-column: span 1;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
     margin-right: 2rem;
-
-    font: var(--text-t4);
-    text-transform: uppercase;
 
     @include mq('custom', 'max', 1024) {
       display: none;
@@ -190,7 +184,7 @@
     padding-top: 50%;
 
     cursor: pointer;
-    
+
 
     @include mq('custom', 'max', 640) {
       padding-top: 81.33%;

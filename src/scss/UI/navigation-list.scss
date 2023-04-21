@@ -1,0 +1,26 @@
+.navigation-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  font: var(--text-t4);
+  text-transform: uppercase;
+
+  &__item {
+    display: flex;
+
+    &.active {
+      font-family: "Intro Bold", sans-serif;
+      line-height: 100%;
+      color: var(--primary-color);
+    }
+
+    svg {
+      width: 0.8rem;
+      height: 0.8rem;
+      margin-right: 0.8rem;
+      margin-left: -0.2rem;
+      stroke-width: 3px;
+    }
+  }
+}
