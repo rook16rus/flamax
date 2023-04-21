@@ -3,6 +3,18 @@
     @extend .section-title;
 
     margin-bottom: 7.7rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 5.6rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2.4rem;
+    }
   }
 
   &__list {
@@ -11,6 +23,10 @@
 
     border-top: 1px solid #D6D6D6;
     border-left: 1px solid #D6D6D6;
+
+    @include mq('custom', 'max', 768) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__item-link {
@@ -25,6 +41,18 @@
     color: var(--black-color);
 
     transition: 0.3s;
+
+    @include mq('custom', 'max', 1024) {
+      height: 18rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      height: 14rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      height: 10rem;
+    }
 
     &:hover {
       background-color: #EEF1F5;
