@@ -214,6 +214,18 @@ img {
 
   &--inner {
     padding: 12.4rem 0;
+
+    @include mq('custom', 'max', 1024) {
+      padding: 9.2rem 0;
+    }
+
+    @include mq('custom', 'max', 768) {
+      padding: 6.6rem 0;
+    }
+
+    @include mq('custom', 'max', 640) {
+      padding: 4rem 0;
+    }
   }
 
   &--small-margin {
@@ -401,6 +413,10 @@ a:focus {
   font: var(--text-t3);
   text-transform: uppercase;
 
+  @include mq('custom', 'max', 640) {
+    font: var(--text-t4);
+  }
+
   &--red {
     background-color: var(--primary-color);
     color: #fff;
@@ -414,6 +430,10 @@ a:focus {
 
 .section-title {
   position: relative;
+
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
 
   font: var(--title-h2);
   text-transform: uppercase;
@@ -434,13 +454,19 @@ a:focus {
     @include mq('custom', 'max', 1024) {
       display: none;
     }
+  }
 
-    @include mq('custom', 'max', 768) {
+  &::after {
+    content: attr(data-count);
 
-    }
+    margin-left: 0.6rem;
+    margin-top: -.5rem;
+
+    font: var(--text-t2);
+    color: rgba(0, 0, 0, 0.25);
 
     @include mq('custom', 'max', 640) {
-
+      margin-left: 0.4rem;
     }
   }
 }

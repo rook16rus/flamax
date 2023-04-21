@@ -1,4 +1,19 @@
 .past-event {
   background:  url("../images/section-bg.png") no-repeat center;
   background-size: cover;
+
+  .section-header__link {
+    @include mq('custom', 'max', 768) {
+      display: none;
+    }
+  }
+
+  &__link {
+    display: none;
+
+    @include mq('custom', 'max', 768) {
+      display: flex;
+      margin-top: 2.8rem;
+    }
+  }
 }
