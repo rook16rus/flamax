@@ -10,7 +10,7 @@
   &__logo {
     grid-column: span 1;
     width: 10.6rem;
-    height: 4rem;
+    height: 1.5rem;
 
     svg {
       width: 100%;
@@ -21,13 +21,14 @@
   &__menu {
     display: flex;
     margin-right: auto;
-    grid-column: span 5;
+    grid-column: span 4;
   }
 
   &__menu-item {
     margin-right: 2.4rem;
 
     font: var(--text-t3);
+    letter-spacing: 0.04em;
     text-transform: uppercase;
   }
 
@@ -36,6 +37,16 @@
     align-content: center;
     justify-content: flex-end;
     grid-column: span 2;
+  }
+
+  &__search-button {
+    display: block;
+    margin-right: 3rem;
+
+    svg {
+      width: 1.3rem;
+      height: 1.3rem;
+    }
   }
 
   &__phone {
@@ -51,6 +62,36 @@
     svg {
       width: 1rem;
       height: 1rem;
+    }
+  }
+
+  &__button {
+    margin-right: 1.2rem;
+  }
+
+  &__burger-button {
+    position: relative;
+
+    &::before, &::after {
+      content: '';
+
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 2rem;
+      height: 2px;
+
+      background-color: var(--black-color);
+    }
+
+    &::before {
+      transform: translate(-50%, -200%);
+    }
+
+    &::after {
+      transform: translate(-50%, 100%);
     }
   }
 }

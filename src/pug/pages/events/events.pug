@@ -5,12 +5,21 @@
     }
   ]
 
+-
+  const eventsNavigation = [
+    {text: "FLAMAX BUSINESS"},
+    {text: "ПРОШЕДШИЕ МЕРОПРИЯТИЕ"},
+    {text: "ПРОШЕДШИЕ МЕРОПРИЯТИЕ"},
+    {text: "УЧАСТНИКАМ"},
+    {text: "КОНТАКТЫ"},
+  ]
+
 section.events.page-section
   .wide-container
     header.events__header
       +page-navigation()
     .events__body
-      +navigation-list()
+      +navigation-list(eventsNavigation)
       .events__content
         +events-list(events)
         .events__pagination

@@ -36,8 +36,11 @@ header.header
           li.header__menu-item
             a.header__menu-link.link(href="#")= item.text
       .header__right
+        button.header__search-button
+          +icon-multi('search-icon')
         a.header__phone(href="tel:88802006269").link
           +icon-multi('phone-icon')
           span 8 880 200 62 69
-        button.header__registration.button.button--big.button--red-bordered(data-path="registration")
-          | РЕГИСТРАЦИЯ
+        button.header__button.button.button--big.button--transparent-bordered(data-path="registration")
+          | Заказать расчет
+        button.header__burger-button.button.button--icon.button--transparent-bordered
