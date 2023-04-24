@@ -2,11 +2,35 @@
   &__title {
     margin-bottom: 7rem;
     @extend .section-title;
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 5.5rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2.4rem;
+    }
   }
 
   &__accordion {
     padding: 3rem 0;
     border-bottom: 2px solid #312D2D;
+
+    @include mq('custom', 'max', 1024) {
+      padding: 2.4rem 0ex;
+    }
+
+    @include mq('custom', 'max', 768) {
+      padding: 2.2rem 0;
+    }
+
+    @include mq('custom', 'max', 640) {
+      padding: 1.8rem 0;
+    }
 
     &.active {
       .events-program__accordion-button::after {
@@ -41,6 +65,10 @@
     align-items: center;
     gap: 1rem;
 
+    @include mq('custom', 'max', 768) {
+      display: none;
+    }
+
     svg {
       width: 2rem;
       height: 2rem;
@@ -50,6 +78,18 @@
   &__accordion-time {
     margin-left: auto;
     margin-right: 3rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-right: 2.5rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-right: 2rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-right: 1.6rem;
+    }
   }
 
   &__accordion-button {
@@ -57,6 +97,11 @@
     height: 1.6rem;
 
     opacity: 0.25;
+
+    @include mq('custom', 'max', 640) {
+      width: 2rem;
+      height: 2rem;
+    }
 
     &::before, &::after {
       content: '';
@@ -85,6 +130,22 @@
 
     & > *:first-child {
       margin-top: 4rem;
+
+      @include mq('custom', 'max', 640) {
+        margin-top: 3.2rem;
+      }
+    }
+  }
+
+  &__accordion-list {
+    @include mq('custom', 'max', 768) {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      gap: 2rem;
     }
   }
 
@@ -93,8 +154,21 @@
     align-items: center;
     justify-content: space-between;
 
+    @include mq('custom', 'max', 768) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
     &:last-child {
       align-items: flex-end;
+
+      @include mq('custom', 'max', 768) {
+        align-items: stretch;
+
+        .events-program__accordion-item-content {
+          border-bottom: 0;
+        }
+      }
 
       .events-program__accordion-item-content {
         padding-bottom: 0;
@@ -110,6 +184,19 @@
     border-radius: 10rem;
     overflow: hidden;
 
+    @include mq('custom', 'max', 768) {
+      width: 34rem;
+      height: 22.6rem;
+      margin-right: 0;
+      margin-bottom: 1.6rem;
+
+      border-radius: 100rem;
+    }
+
+    @include mq('custom', 'max', 380) {
+      width: 100%;
+    }
+
     img {
       width: 100%;
       height: 100%;
@@ -123,6 +210,18 @@
     flex-grow: 1;
 
     border-top: 1px solid var(--stroke-grey-color);
+
+    @include mq('custom', 'max', 768) {
+      max-width: none;
+      padding: 0 0 2.5rem;
+
+      border-top: 0;
+      border-bottom: 1px solid var(--stroke-grey-color);
+    }
+
+    @include mq('custom', 'max', 640) {
+      padding-bottom: 2rem;
+    }
   }
 
   &__accordion-content-header {
@@ -130,6 +229,22 @@
     align-items: flex-start;
     justify-content: space-between;
     margin-bottom: 3.6rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 2.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 2.2rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__accordion-item-time {
+    flex-shrink: 0;
   }
 
   &__accordion-subtitle {

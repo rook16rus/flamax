@@ -437,6 +437,11 @@ a:focus {
     padding: 0 1.6rem;
 
     border-radius: 9rem;
+
+    @include mq('custom', 'max', 640) {
+      height: 2.2rem;
+      padding: 0 1.2rem;
+    }
   }
 
   &--grey {
