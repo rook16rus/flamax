@@ -2,5 +2,17 @@
   &__title {
     @extend .section-title;
     margin-bottom: 7.2rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 5.6rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2.4rem;
+    }
   }
 }

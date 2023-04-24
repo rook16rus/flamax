@@ -148,6 +148,18 @@
 
   &__registration {
     margin-top: 8rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-top: 6.8rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-top: 5.8rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-top: 4.8rem;
+    }
   }
 
   &__registration-title {
@@ -156,12 +168,36 @@
 
     font: var(--title-h4);
     text-transform: uppercase;
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 2.5rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 2rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 1.6rem;
+    }
   }
 
   &__registration-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+
+    @include mq('custom', 'max', 1024) {
+
+    }
+
+    @include mq('custom', 'max', 768) {
+      grid-template-columns: 1fr;
+    }
+
+    @include mq('custom', 'max', 640) {
+      gap: 1.2rem;
+    }
   }
 
   &__registration-button {
@@ -169,11 +205,20 @@
     margin-top: 1.2rem;
 
     font-family: "Intro Bold", sans-serif;
+
+    @include mq('custom', 'max', 768) {
+      width: 100%;
+    }
   }
 
   &__registration-checkbox-wrapper {
     margin-top: 3.3rem;
     margin-left: auto;
+
+    @include mq('custom', 'max', 768) {
+      margin-top: 1.2rem;
+      margin-left: 0;
+    }
   }
 
   &__registration-checkbox:checked + &__registration-checkbox-label::before {
@@ -190,6 +235,10 @@
 
     font: var(--text-t2);
     color: rgba(51, 51, 51, 0.40);
+
+    @include mq('custom', 'max', 640) {
+      font-size: 1.2rem;
+    }
 
     &::before {
       content: '';
