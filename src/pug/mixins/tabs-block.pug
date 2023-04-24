@@ -1,4 +1,4 @@
-mixin tabs-block(data)
+mixin tabs-block(data, isRegistration)
   .tabs-block.js-tabs-container&attributes(attributes)(data-tabs-like-radio="true")
     .tabs-block__tabs
       each item, index in data
@@ -16,3 +16,49 @@ mixin tabs-block(data)
                 .tabs-block__item-content
                   h3.tabs-block__item-title= it.title
                   p.tabs-block__item-text= it.text
+          form.tabs-block__registration(action="#" data-need-validation)
+            h3.tabs-block__registration-title
+              | Заполните анкету для регистрации
+            .tabs-block__registration-wrapper
+              .tabs-block__registration-input-wrapper.input-wrapper
+                input.tabs-block__registration-input.input.input--medium.input--white(
+                  type="text"
+                  name="registrationName"
+                  required
+                  data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$"
+                  placeholder="ФИО*"
+                )
+              .tabs-block__registration-input-wrapper.input-wrapper
+                input.tabs-block__registration-input.input.input--medium.input--white(
+                  type="email"
+                  name="registrationEmail"
+                  required
+                  placeholder="E-mail*"
+                )
+              .tabs-block__registration-input-wrapper.input-wrapper
+                input.tabs-block__registration-input.input.input--medium.input--white.js-phone-input(
+                  type="tel"
+                  name="registrationPhone"
+                  required
+                  placeholder="Ваш телефон*"
+                  data-parsley-phone
+                )
+              .tabs-block__registration-input-wrapper.input-wrapper
+                input.tabs-block__registration-input.input.input--medium.input--white(
+                  type="text"
+                  name="registrationName"
+                  placeholder="Название компании"
+                )
+              button.tabs-block__registration-button.button.button--large.button--red
+                | ЗАРЕГИСТРИРОВАТЬСЯ
+              .tabs-block__registration-checkbox-wrapper.input-wrapper
+                input.tabs-block__registration-checkbox.visually-hidden(
+                  type="checkbox"
+                  name="registrationConfidence"
+                  id="registrationConfidence"
+                  required
+                  checked
+                )
+                label.tabs-block__registration-checkbox-label(for="registrationConfidence")
+                  span Я согласен с #[a(href="#") политикой конфиденциальности]
+

@@ -28,19 +28,6 @@ window.Parsley.addValidator('requiredIfChecked', {
     priority: 33,
 });
 
-window.Parsley.addValidator('onl', {
-  requirementType: 'string',
-  validateString: function (value) {
-      if (value.trim() === '') return true;
-      return /^\+?\d+$/.test(value);
-  },
-  messages: {
-      en: 'Only numbers allowed"',
-      ru: 'Допустимо использовать только цифры',
-  },
-  priority: 51
-})
-
 window.Parsley.addValidator('phone', {
     requirementType: 'string',
     validateString: function (value) {
@@ -64,18 +51,6 @@ window.Parsley.addValidator('date', {
         en: 'Enter correct date',
         ru: 'Введите правильно дату',
     },
-});
-
-window.Parsley.addValidator('fio', {
-  requirementType: 'string',
-  validateString: (value) => {
-    if (value.trim() === '') return true;
-    return /^[a-яA-Я\s]+$/.test(value);
-  },
-  messages: {
-    en: 'This value should be a name',
-    ru: 'Допустимо использовать только латинские и русские буквы'
-  },
 });
 
 
@@ -103,24 +78,6 @@ window.Parsley.addValidator('maxFileSize', {
   }
 });
 
-window.Parsley.addValidator('fileType', {
-  requirementType: 'string',
-  validateString: function(_value, maxSize, parsleyInstance) {
-    const types = ["pdf", "doc", "docx", "jpg", "jpeg", "png"]
-
-    let files = parsleyInstance.$element[0].files;
-    let uploadedFileType = files[0].name.match(/\w+$/gi)[0];
-
-    const filtederType = types.includes(uploadedFileType);
-
-    return filtederType;
-  },
-  messages: {
-    en: 'Valid file format pdf, doc, docx, jpg, png',
-    ru: 'Допустимый формат файлов pdf, doc, docx, jpg, png',
-  }
-});
-
 Parsley.addMessages('ru', {
     defaultMessage: 'Некорректное значение.',
     type: {
@@ -132,7 +89,7 @@ Parsley.addMessages('ru', {
         alphanum: 'Введите буквенно-цифровое значение',
     },
     notblank: 'Это поле должно быть заполнено',
-    required: '%s',
+    required: 'Обязательное поле',
     pattern: 'Это значение некорректно',
     min: 'Это значение должно быть не менее чем %s',
     max: 'Это значение должно быть не более чем %s',
