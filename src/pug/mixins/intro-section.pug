@@ -37,14 +37,15 @@ mixin intro-section(img, isTimer)
               +pictureLazy(img, "Фото")
             if isTimer
               .intro-section__timer
-                .intro-section__timer-desc
-                  +icon-multi("time-icon")
-                  span до начала
-                .intro-section__timer-numbers
-                  for item in timerNumbers
-                    .intro-section__timer-number
-                      span.intro-section__timer-number-digit= item.digit
-                      span.intro-section__timer-number-desc= item.desc
+                .intro-section__timer-header
+                  .intro-section__timer-desc
+                    +icon-multi("time-icon")
+                    span до начала
+                  .intro-section__timer-numbers
+                    for item in timerNumbers
+                      .intro-section__timer-number
+                        span.intro-section__timer-number-digit= item.digit
+                        span.intro-section__timer-number-desc= item.desc
                 .intro-section__timer-text
                   p
                     | Текст — зафиксированная на каком-либо материальном носителе человеческая мысль.
