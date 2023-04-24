@@ -5,25 +5,66 @@
     margin-bottom: 7.6rem;
 
     background-color: #F3F5F8;
+
+    @include mq('custom', 'max', 1024) {
+      padding-top: 16.6rem;
+      margin-bottom: 6rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      padding-top: 13.3rem;
+      margin-bottom: 4.6rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      padding-top: 10rem;
+      padding-bottom: 1.8rem;
+      margin-bottom: 3.2rem;
+    }
   }
 
   &__body {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     align-items: flex-start;
+
+    @include mq('custom', 'max', 1024) {
+      grid-template-columns: 1fr;
+      align-items: stretch;
+    }
   }
 
   .navigation-list {
     grid-column: span 1;
     margin-right: 2rem;
+
+    @include mq('custom', 'max', 1024) {
+      display: none;
+    }
   }
 
   &__content {
     grid-column: span 7;
+
+    @include mq('custom', 'max', 1024) {
+      grid-column: auto;
+    }
   }
 
   .events-list {
     margin-bottom: 6rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 4.4rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 3rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 1.6rem;
+    }
 
     &__item:last-of-type {
       padding-bottom: 0;
@@ -74,6 +115,12 @@
         height: 0.3rem;
 
         background-color: var(--primary-color);
+      }
+    }
+
+    &.hide {
+      @include mq('custom', 'max', 640) {
+        display: none;
       }
     }
   }

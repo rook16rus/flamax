@@ -3,14 +3,30 @@
   grid-template-columns: repeat(8, 1fr);
   align-items: flex-start;
 
+  @include mq('custom', 'max', 768) {
+    grid-template-columns: auto 1fr;
+    gap: 1.6rem 0;
+  }
+
   &__button {
     grid-column: span 1;
     width: 7.7rem;
     height: 4.1rem;
+    margin-right: 2rem;
+
+    @include mq('custom', 'max', 768) {
+      width: 5.9rem;
+      height: 3.1rem;
+    }
 
     svg {
       width: 2.1rem;
       height: 1.4rem;
+
+      @include mq('custom', 'max', 768) {
+        width: 1.6rem;
+        height: 1rem;
+      }
     }
   }
 
@@ -19,11 +35,25 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
+
+    @include mq('custom', 'max', 768) {
+      display: contents;
+      grid-column: auto;
+    }
   }
 
   &__title {
     font: var(--title-h2);
+
+    @include mq('custom', 'max', 768) {
+      order: 1;
+      grid-column: span 2;
+    }
   }
 
-
+  .breadcrumbs {
+    @include mq('custom', 'max', 768) {
+      margin-top: 1rem;
+    }
+  }
 }

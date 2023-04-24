@@ -2,23 +2,39 @@
   display: flex;
   align-items: center;
 
+  overflow-x: auto;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+
   font: var(--text-t4);
   text-transform: uppercase;
+
+  @include mq('custom', 'max', 640) {
+    width: calc(100% + 2rem);
+  }
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 
   &__arrow {
     width: 0.2rem;
     height: 0.2rem;
     margin: 0 1.5rem;
+    flex-shrink: 0;
 
     border-radius: 50%;
     background-color: var(--primary-color);
   }
 
   &__item {
+    flex-shrink: 0;
+
     &:last-of-type {
       opacity: 0.25;
       cursor: default;
       pointer-events: none;
+      margin-right: 2rem;
     }
   }
 }
