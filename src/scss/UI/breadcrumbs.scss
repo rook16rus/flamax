@@ -1,0 +1,24 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+
+  font: var(--text-t4);
+  text-transform: uppercase;
+
+  &__arrow {
+    width: 0.2rem;
+    height: 0.2rem;
+    margin: 0 1.5rem;
+
+    border-radius: 50%;
+    background-color: var(--primary-color);
+  }
+
+  &__item {
+    &:last-of-type {
+      opacity: 0.25;
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+}

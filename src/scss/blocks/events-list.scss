@@ -9,6 +9,19 @@
     gap: 1.6rem;
   }
 
+  &--main {
+    @include mq('custom', 'max', 768) {
+      .events-list__item-img {
+        height: 23rem;
+      }
+
+      .events-list__item-tag  {
+        top: 2rem;
+        left: 2rem;
+      }
+    }
+  }
+
   &__item {
     position: relative;
 

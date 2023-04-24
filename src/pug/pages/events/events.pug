@@ -2,7 +2,37 @@
   const events = [
     {
       img: "event-1.jpg",
-    }
+      title: "Кондуктометрические и гидростатические датчики уровня воды в резервуарах FLAMAX",
+      text: "В стандартных резервуарах FLAMAX для выполнения различных технологических процессов, связанных с эксплуатацией резервуара, необходимо фиксировать определенные уровни наполнения емкостей"
+    },
+    {
+      img: "event-2.jpg",
+      title: "Насосные станции в автоматических системах пожаротушения",
+      text: "В данной статье мы рассмотрим типы систем пожаротушения и какую роль в них играют насосные станции."
+    },
+    {
+      img: "event-3.jpg",
+      title: "Насосные станции в автоматических системах пожаротушения",
+      text: "В данной статье мы рассмотрим типы систем пожаротушения и какую роль в них играют насосные станции."
+    },
+    {
+      img: "event-1.jpg",
+      title: "Кондуктометрические и гидростатические датчики уровня воды в резервуарах FLAMAX",
+      text: "В стандартных резервуарах FLAMAX для выполнения различных технологических процессов, связанных с эксплуатацией резервуара, необходимо фиксировать определенные уровни наполнения емкостей",
+      tagMod: "tag--white"
+    },
+    {
+      img: "event-2.jpg",
+      title: "Насосные станции в автоматических системах пожаротушения",
+      text: "В данной статье мы рассмотрим типы систем пожаротушения и какую роль в них играют насосные станции.",
+      tagMod: "tag--white"
+    },
+    {
+      img: "event-3.jpg",
+      title: "Насосные станции в автоматических системах пожаротушения",
+      text: "В данной статье мы рассмотрим типы систем пожаротушения и какую роль в них играют насосные станции.",
+      tagMod: "tag--white"
+    },
   ]
 
 -
@@ -25,14 +55,14 @@ section.events.page-section.js-intro-block
     .events__body
       +navigation-list(eventsNavigation)
       .events__content
-        +events-list(events)
+        +events-list(events, "events-list--main")
         .events__pagination
           .events__pagination-numbers
             - var i = 1;
             while i < 11
-              a.events__pagination-number(href="#")= i++
+              a.events__pagination-number(class=`${i === 1 ? 'active' : ''}` href="#")= i++
           .events__pagination-arrows
-            button.events__pagination-arrow
+            a.events__pagination-arrow(href="#")
               +icon-multi('slider-arrow')
-            button.events__pagination-arrow
+            a.events__pagination-arrow(href="#")
               +icon-multi('slider-arrow')

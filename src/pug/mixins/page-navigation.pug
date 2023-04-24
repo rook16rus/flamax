@@ -1,6 +1,6 @@
 mixin page-navigation(title, breadcrumbs)
   .page-navigation
-    .page-navigation__button
+    a.page-navigation__button.button.button--transparent-bordered(href="index.html")
       +icon-multi("back-icon")
     .page-navigation__content
       h1.page-navigation__title= title

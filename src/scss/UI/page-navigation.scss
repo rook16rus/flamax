@@ -1,3 +1,29 @@
 .page-navigation {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  align-items: flex-start;
+
+  &__button {
+    grid-column: span 1;
+    width: 7.7rem;
+    height: 4.1rem;
+
+    svg {
+      width: 2.1rem;
+      height: 1.4rem;
+    }
+  }
+
+  &__content {
+    grid-column: span 7;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  &__title {
+    font: var(--title-h2);
+  }
+
 
 }
