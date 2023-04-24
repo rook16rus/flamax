@@ -1,0 +1,25 @@
+-
+  const eventsSectionList = [
+    {img: "events-section-1.jpg"},
+    {img: "events-section-2.jpg", tagMod: "tag--white"},
+  ]
+
+section.events-section.page-section.page-section--inner
+  .container
+    +section-header("ВСЕ мероприятия")
+    ul.events-section__list
+      for item in eventsSectionList
+        li.events-section__item
+          .events-section__item-img
+            .events-section__item-tag.tag.tag--small(class=`${item.tagMod ? item.tagMod : "tag--red"}`)
+              | СКОРО
+            +pictureLazy(item.img, "Фото")
+          .events-section__item-content
+            time.events-section__item-time
+              | 14 октября 2022
+            h3.events-section__item-title
+              | Адаптация бизнеса к новым возможностям. Опыт лидеров.
+            .events-section__item-footer
+              +meta-item("location-icon", "Москва, «Красный Октябрь»")
+              a.events-section__item-link(href="#")
+                +icon-multi("link-icon")
