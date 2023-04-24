@@ -3,7 +3,7 @@ mixin events-list(data, mod)
     for item in data
       li.events-list__item
         .events-list__item-img
-          .events-list__item-tag.tag(class=`${item.tagMod ? "tag--white" : "tag--red"}`)
+          .events-list__item-tag.tag.tag--small(class=`${item.tagMod ? "tag--white" : "tag--red"}`)
             | завершено
           +pictureLazy(item.img, "Фото мероприятия")
         .events-list__item-content

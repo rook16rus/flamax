@@ -1,0 +1,70 @@
+-
+  const eventsAccordion = [
+    {
+      title: "Сбор гостей",
+    },
+    {
+      title: "Деловая программа",
+      metaIcon: "speaker-icon",
+      metaDesc: "3 спикера"
+    },
+    {
+      title: "Культурно-развлекательная",
+      metaIcon: "mic-icon",
+      metaDesc: "2 номера"
+    },
+    {
+      title: "Блиц-раунд",
+      metaIcon: "speaker-icon",
+      metaDesc: "5 спикеров"
+    },
+    {
+      title: "Вечерний фуршет",
+      metaIcon: "speaker-icon",
+      metaDesc: "5 спикеров"
+    },
+  ]
+
+-
+  const accordionList = [
+    {img: "event-accordion-1.jpg"},
+    {img: "event-accordion-2.jpg"},
+    {img: "event-accordion-3.jpg"},
+  ]
+
+section.events-program.page-section
+  .container
+    h2.events-program__title
+      | ПРОГРАММА
+    .events-program__accordions
+      for item in eventsAccordion
+        .events-program__accordion.js-accordion
+          .events-program__accordion-header.js-accordion-btn
+            h3.events-program__accordion-title= item.title
+            .events-program__accordion-header-right
+              if item.metaIcon
+                .events-program__accordion-meta
+                  +icon-multi(item.metaIcon)
+                  span= item.metaDesc
+              time.events-program__accordion-time.tag.tag--large.tag--grey
+                | 17:30 - 18:25
+              button.events-program__accordion-button
+          .events-program__accordion-content.js-accordion-content
+            ul.events-program__accordion-list
+              for it in accordionList
+                li.events-program__accordion-item
+                  .events-program__accordion-img
+                    +pictureLazy(it.img, "Фото")
+                  .events-program__accordion-item-content
+                    .events-program__accordion-content-header
+                      .events-program__accordion-content-header-left
+                        h4.events-program__accordion-subtitle
+                          | Фиргат Зиганшин
+                        span.events-program__accordion-position
+                          | Генеральный директор ООО «ФЛАМАКС»
+                      time.events-program__accordion-item-time.tag.tag--large.tag--grey
+                        | 17:30 - 18:25
+                    .events-program__accordion-text
+                      p
+                        | Тема: Приветственное слово. Презентация нового производства насосных станций и резервуаров на территории России.
+

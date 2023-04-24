@@ -417,16 +417,31 @@ a:focus {
 .tag {
   display: flex;
   align-items: center;
-  height: 1.9rem;
-  padding: 0 0.8rem;
-
-  border-radius: 1.6rem;
 
   font: var(--text-t3);
   text-transform: uppercase;
 
   @include mq('custom', 'max', 640) {
     font: var(--text-t4);
+  }
+
+  &--small {
+    height: 1.9rem;
+    padding: 0 0.8rem;
+
+    border-radius: 1.6rem;
+  }
+
+  &--large {
+    height: 4.2rem;
+    padding: 0 1.6rem;
+
+    border-radius: 9rem;
+  }
+
+  &--grey {
+    background-color: #F3F5F8;
+    color: var(--black-color);
   }
 
   &--red {
