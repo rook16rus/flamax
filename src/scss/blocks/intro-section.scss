@@ -1,0 +1,139 @@
+.intro-section {
+  padding: 12.4rem 0 7.2rem;
+
+  background: #F3F5F8 url("../images/intro-section-bg.png") no-repeat center;
+  background-size: cover;
+
+  .page-navigation {
+    margin-bottom: 3.2rem;
+
+    &__title {
+      max-width: 80rem;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: flex-start;
+  }
+
+  .navigation-list {
+    margin-right: 2rem;
+    grid-column: span 1;
+  }
+
+  &__content {
+    grid-column: span 7;
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -3.2rem;
+    margin-bottom: 3rem;
+  }
+
+  .meta-item {
+    font: var(--text-t2);
+    margin-right: 3.2rem;
+    margin-bottom: 1rem;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  &__content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1.6rem;
+  }
+
+  &__img {
+    position: relative;
+
+    &::before {
+      content: '';
+
+      display: block;
+      width: 100%;
+      padding-top: 56.35%;
+    }
+
+    img {
+      @extend .fully-filled-el;
+      object-fit: cover;
+    }
+  }
+
+  &__timer {
+    display: flex;
+    flex-direction: column;
+    max-width: 47.9rem;
+    padding: 4.8rem;
+
+    background-color: #fff;
+  }
+
+  &__timer-desc {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 0.8rem;
+    max-width:  31.7rem;
+    padding-bottom: 1.6rem;
+    margin-bottom: 2.4rem;
+
+    border-bottom: 1px solid var(--stroke-grey-color);
+
+    font: var(--text-t2);
+    text-transform: uppercase;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  &__timer-numbers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.7rem;
+    max-width: 21.5rem;
+  }
+
+  &__timer-number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2.6rem;
+  }
+
+  &__timer-number-digit {
+    margin-bottom: 0.2rem;
+
+    font: var(--other-1);
+    color: var(--primary-color);
+  }
+
+  &__timer-number-desc {
+    font: var(--text-t2);
+    color: rgba(51, 51, 51, 0.6);
+  }
+
+  &__timer-text {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: auto;
+    margin-bottom: 2.4rem;
+
+    font: var(--text-t1);
+  }
+
+  &__timer-button {
+    align-self: flex-start;
+  }
+}

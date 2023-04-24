@@ -1,5 +1,5 @@
-mixin page-navigation(title, breadcrumbs)
-  .page-navigation
+mixin page-navigation(title, breadcrumbs, mod)
+  .page-navigation(class=`${mod ? mod : ''}`)
     a.page-navigation__button.button.button--transparent-bordered(href="index.html")
       +icon-multi("back-icon")
     .page-navigation__content

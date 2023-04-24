@@ -19,6 +19,7 @@
   /* Font Family */
   --main-ff: 'Intro Bold', sans-serif;
   --secondary-ff: 'Intro Book', sans-serif;
+  --thertiary-ff: 'Intro Regular', sans-serif;
 
   /* Font Weight */
   --regular: 400;
@@ -32,13 +33,14 @@
   /* Titles */
   --title-h1: var(--regular) 10rem/90% var(--main-ff);
   --title-h2: var(--regular) 4.2rem/100% var(--main-ff);
+  --title-h2-reg: var(--regular) 4.2rem/100% var(--thertiary-ff);
   --title-h3: var(--regular) 2.8rem/5.3rem var(--main-ff);
   --title-h4: var(--regular) 2.5rem/110% var(--main-ff);
   --title-h5: var(--regular) 2rem/110% var(--main-ff);
   --title-h6: var(--regular) 1.7rem/110% var(--main-ff);
 
   /* Other Typography */
-  --other-1: var(--regular) 5.6rem/100% var(--secondary-ff);
+  --other-1: var(--regular) 5.6rem/100% var(--thertiary-ff);
   --other-2: var(--regular) 3.2rem/100% var(--secondary-ff);
 }
 
@@ -54,6 +56,7 @@
     /* Titles */
     --title-h1: var(--regular) 7.5rem/90% var(--main-ff);
     --title-h2: var(--regular) 3rem/100% var(--main-ff);
+    --title-h2-reg: var(--regular) 3rem/100% var(--thertiary-ff);
     --title-h3: var(--regular) 2.2rem/100% var(--main-ff);
     --title-h4: var(--regular) 2.2rem/110% var(--main-ff);
     --title-h5: var(--regular) 2.2rem/110% var(--main-ff);
@@ -77,6 +80,7 @@
     /* Titles */
     --title-h1: var(--regular) 4.8rem/90% var(--main-ff);
     --title-h2: var(--regular) 2rem/115% var(--main-ff);
+    --title-h2-reg: var(--regular) 2rem/115% var(--thertiary-ff);
     --title-h3: var(--regular) 1.6rem/100% var(--main-ff);
     --title-h4: var(--regular) 1.6rem/110% var(--main-ff);
     --title-h5: var(--regular) 1.6rem/110% var(--main-ff);

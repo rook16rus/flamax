@@ -19,3 +19,15 @@
     url("../fonts/Intro-Bold.woff2") format("woff2"),
     url("../fonts/Intro-Bold.woff") format("woff");
 }
+
+@font-face {
+  font-weight: 400;
+  font-family: 'Intro Regular';
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Intro Book"),
+    url("../fonts/Intro-Regular.woff2") format("woff2"),
+    url("../fonts/Intro-Regular.woff") format("woff");
+}
+

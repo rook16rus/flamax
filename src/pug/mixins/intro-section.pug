@@ -1,0 +1,52 @@
+-
+  const introNavigation = [
+    {text: "FLAMAX BUSINESS", active: true},
+    {text: "ПРОШЕДШИЕ МЕРОПРИЯТИЕ"},
+    {text: "ПРОШЕДШИЕ МЕРОПРИЯТИЕ"},
+    {text: "УЧАСТНИКАМ"},
+    {text: "КОНТАКТЫ"},
+  ]
+
+-
+  const timerNumbers = [
+    {digit: "12", desc: "дней"},
+    {digit: "8", desc: "часов"},
+    {digit: "56", desc: "минут"},
+  ]
+
+-
+  const breadcrumbs = [
+      ["Главная", "index.html"],
+      ["FLAMAX BUSINESS", "index.html"],
+      ["ВСЕ МЕРОПРИЯТИЯ", "events.html"],
+      ["Адаптация бизнеса к новым возможностям. Опыт лидеров.", "#"],
+  ]
+
+mixin intro-section(img, isTimer)
+  section.intro-section.page-section.js-intro-block&attributes(attributes)
+    .wide-container
+      +page-navigation("Адаптация бизнеса к новым возможностям. Опыт лидеров.", breadcrumbs, "page-navigation--intro")
+      .intro-section__wrapper
+        +navigation-list(introNavigation)
+        .intro-section__content
+          .intro-section__meta
+            +meta-item("date-icon", "22 октября 2021")
+            +meta-item("location-icon", "Москва, «Красный Октябрь»")
+          .intro-section__content-wrapper
+            .intro-section__img
+              +pictureLazy(img, "Фото")
+            if isTimer
+              .intro-section__timer
+                .intro-section__timer-desc
+                  +icon-multi("time-icon")
+                  span до начала
+                .intro-section__timer-numbers
+                  for item in timerNumbers
+                    .intro-section__timer-number
+                      span.intro-section__timer-number-digit= item.digit
+                      span.intro-section__timer-number-desc= item.desc
+                .intro-section__timer-text
+                  p
+                    | Текст — зафиксированная на каком-либо материальном носителе человеческая мысль.
+                button.intro-section__timer-button.button.button--large.button--red
+                  | ЗАРЕГИСТРИРОВАТЬСЯ
