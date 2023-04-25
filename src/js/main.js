@@ -24,6 +24,7 @@ import doubleSlider from "./helpers/doubleSlider";
 import tabs from "./helpers/tabs";
 import header from "./helpers/header";
 import introTopOffset from "./helpers/introTopOffset";
+import eventsGallerySlider from "./helpers/eventsGallerySlider";
 
 documenReady(() => {
   window.project_API = { };
@@ -47,7 +48,8 @@ documenReady(() => {
   doubleSlider();
   tabs();
   header();
-  introTopOffset()
+  introTopOffset();
+  eventsGallerySlider();
 });
 
 document.fonts.ready.then((res) => {

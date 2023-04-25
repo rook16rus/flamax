@@ -36,7 +36,7 @@
   &__content-wrapper {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    margin-bottom: 5.6rem;
+    margin-bottom: 3.2rem;
 
     @include mq('custom', 'max', 1024) {
       margin-top: 4rem;
@@ -63,6 +63,7 @@
     margin-top: -0.8rem;
 
     font: var(--title-h1);
+    font-size: 9rem;
     text-transform: uppercase;
     color: var(--primary-color);
 
@@ -181,7 +182,7 @@
     position: relative;
 
     width: 100%;
-    padding-top: 50%;
+    padding-top: 45%;
 
     cursor: pointer;
 

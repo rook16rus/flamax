@@ -7,11 +7,13 @@
 
 section.events-gallery.page-section.page-section--inner
   .container
-    +section-header("ФОТООТЧЕТ с&nbsp;мероприятия")
-    .events-gallery__slider.swiper.js-init-slider(data-slides="auto" data-spaces="100:38,769:76")
+    +section-header("ФОТООТЧЕТ с&nbsp;мероприятия", false, true)
+    .events-gallery__slider.swiper
       .swiper-wrapper
         for item in eventsGallery
           .events-gallery__slide.swiper-slide
             +pictureLazy(item.img)
       +slider-navigation('slider-navigation--white-color slider-navigation--large')
-
+      .swiper-scrollbar
+    a.events-gallery__link.button.button--medium.button--bordered(href="#")
+      | ВСЕ ФОТОГРАФИИ
