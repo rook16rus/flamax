@@ -1,0 +1,125 @@
+.events-speakers {
+  &__wrapper {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  &__content-slider-container {
+    position: relative;
+    z-index: 3;
+
+    grid-column: span 2;
+    min-width: 0;
+    margin-right: 2rem;
+    margin-bottom: 9rem;
+  }
+
+  &__img-slider-container {
+    grid-column: span 4;
+    min-width: 0;
+  }
+
+  &__title {
+    @extend .section-title;
+    margin-bottom: 8rem;
+  }
+
+  &__slide-position {
+    display: flex;
+    margin-bottom: 1.2rem;
+
+    font: var(--text-t4);
+    text-transform: uppercase;
+  }
+
+  &__slide-title {
+    margin-bottom: 3.2rem;
+
+    font: var(--title-h4);
+    text-transform: uppercase;
+  }
+
+  &__slide-text {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2.4rem;
+
+    font: var(--text-t1);
+  }
+
+  &__slide-link {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 0.8rem;
+
+    font: var(--text-t3);
+    text-transform: uppercase;
+    font-family: "Intro Bold", sans-serif;
+    color: var(--primary-color);
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  &__img-slide {
+    position: relative;
+    z-index: -2;
+    transition: 0.3s transform;
+
+    cursor: pointer;
+
+    &.swiper-slide {
+      transform: scale(0.8);
+    }
+
+    &.swiper-slide-active {
+      transform: scale(1);
+    }
+  }
+
+  &__img-slider {
+    position: relative;
+
+    width: 52.4rem;
+    height: 57.8rem;
+    margin: 0;
+
+    overflow: visible;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      right: 100%;
+      top: 0;
+      z-index: 2;
+
+      width: 300%;
+      height: 100%;
+      background-color: #fff;
+
+      @include mq('custom', 'max', 768) {
+        display: none;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .slider-navigation {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+}
