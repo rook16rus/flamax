@@ -1,0 +1,17 @@
+-
+  const eventsGallery = [
+    {img: "event-gallery-1.jpg"},
+    {img: "event-gallery-2.jpg"},
+    {img: "event-gallery-1.jpg"},
+  ]
+
+section.events-gallery.page-section.page-section--inner
+  .container
+    +section-header("ФОТООТЧЕТ с&nbsp;мероприятия")
+    .events-gallery__slider.swiper.js-init-slider(data-slides="auto" data-spaces="100:38,769:76")
+      .swiper-wrapper
+        for item in eventsGallery
+          .events-gallery__slide.swiper-slide
+            +pictureLazy(item.img)
+      +slider-navigation('slider-navigation--white-color slider-navigation--large')
+

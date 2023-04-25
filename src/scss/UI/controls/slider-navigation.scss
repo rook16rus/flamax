@@ -11,6 +11,22 @@
     color: #fff;
   }
 
+  &--white-color {
+    color: #fff;
+  }
+
+  &--large {
+    .slider-navigation__button {
+      width: 6rem;
+      height: 6rem;
+
+      svg {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+  }
+
   &--bordered {
     border: 1px solid var(--stroke-grey-color);
     color: var(--black-color);

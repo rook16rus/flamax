@@ -1,5 +1,5 @@
 mixin section-header(title, count)
   header.section-header&attributes(attributes)
-    h2.section-header__title(data-count=count)= title
+    h2.section-header__title(data-count=count)!= title
     a.section-header__link.button.button--medium.button--bordered(href="#")
       | СМОТРЕТЬ ВСЕ
