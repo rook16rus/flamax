@@ -10,17 +10,22 @@ export default function doubleSlider() {
     const thumbSlider = container.querySelector('.js-double-slider-thumb');
 
     const thumbSwiper = new Swiper(thumbSlider, {
-      slidesPerView: 1,
+      slidesPerView: "auto",
       effect: "fade",
       allowTouchMove: false,
       autoHeight: true,
       fadeEffect: {
         crossFade: true
       },
+      breakpoints: {
+        768: {
+          slidesPerView: 1
+        }
+      }
     })
 
     const swiper = new Swiper(slider, {
-      slidesPerView: 1,
+      slidesPerView: "auto",
       thumbs: {
         swiper: thumbSwiper
       },
@@ -31,6 +36,11 @@ export default function doubleSlider() {
       pagination: {
         type: "bullets",
         el: container.querySelector('.slider-pagination')
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 1
+        }
       }
     })
   })
