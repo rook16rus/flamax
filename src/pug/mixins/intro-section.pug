@@ -22,8 +22,8 @@
       ["Адаптация бизнеса к новым возможностям. Опыт лидеров.", "#"],
   ]
 
-mixin intro-section(img, isTimer)
-  section.intro-section.page-section.js-intro-block&attributes(attributes)
+mixin intro-section(img, isTimer, mod)
+  section.intro-section.page-section.js-intro-block&attributes(attributes)(class=`${mod ? mod : ''}`)
     .wide-container
       +page-navigation("Адаптация бизнеса к новым возможностям. Опыт лидеров.", breadcrumbs, "page-navigation--intro")
       .intro-section__wrapper
@@ -51,3 +51,7 @@ mixin intro-section(img, isTimer)
                     | Текст — зафиксированная на каком-либо материальном носителе человеческая мысль.
                 button.intro-section__timer-button.button.button--large.button--red
                   | ЗАРЕГИСТРИРОВАТЬСЯ
+            else
+              .intro-section__description
+                p
+                  | За 14 лет активной деятельности компания участвовала в десятках отраслевых и строительных мероприятий, а также организовывала социально значимые благотворительные мероприятия. Накопленный опыт аккумулировался в создание собственных оффлайн мероприятий — FLAMAX Business

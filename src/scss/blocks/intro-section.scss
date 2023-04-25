@@ -4,6 +4,11 @@
   background: #F3F5F8 url("../images/intro-section-bg.png") no-repeat center;
   background-size: cover;
 
+  &--without-bg {
+    background: none;
+    padding-bottom: 0;
+  }
+
   @include mq('custom', 'max', 1024) {
     padding: 11.6rem 0 6.4rem;
   }
@@ -133,7 +138,7 @@
   &__timer {
     display: flex;
     flex-direction: column;
-    max-width: 47.9rem;
+    width: 47.9rem;
     padding: 4.8rem;
 
     background-color: #fff;
@@ -143,7 +148,7 @@
     }
 
     @include mq('custom', 'max', 768) {
-      max-width: none;
+      width: 100%;
       padding: 2.6rem;
     }
 
@@ -240,14 +245,6 @@
 
     font: var(--text-t1);
 
-    @include mq('custom', 'max', 1024) {
-
-    }
-
-    @include mq('custom', 'max', 768) {
-
-    }
-
     @include mq('custom', 'max', 640) {
       margin-bottom: 1.6rem;
       font-size: 1.3rem;
@@ -256,5 +253,28 @@
 
   &__timer-button {
     align-self: flex-start;
+  }
+
+  &__description {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 47.9rem;
+
+    font: var(--text-t1);
+
+    @include mq('custom', 'max', 768) {
+      width: 100%;
+    }
+
+    p {
+      max-width: 40rem;
+      margin-left: auto;
+
+      @include mq('custom', 'max', 768) {
+        margin-left: 0;
+        max-width: none;
+      }
+    }
   }
 }
