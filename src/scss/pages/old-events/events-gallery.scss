@@ -21,6 +21,8 @@
     width: 100%;
     height: 64rem;
 
+    cursor: pointer;
+
     @include mq('custom', 'max', 1024) {
       height: 51rem;
     }
