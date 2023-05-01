@@ -53,7 +53,8 @@ section.events.page-section.js-intro-block
       )
   .wide-container
     .events__body
-      +navigation-list(eventsNavigation)
+      .events__nav
+        +navigation-list(eventsNavigation).js-sticky-widget
       .events__content
         +events-list(events, "events-list--main")
         .events__pagination

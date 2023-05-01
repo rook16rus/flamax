@@ -26,7 +26,7 @@
   &__body {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    align-items: flex-start;
+    align-items: stretch;
 
     @include mq('custom', 'max', 1024) {
       grid-template-columns: 1fr;
@@ -34,7 +34,7 @@
     }
   }
 
-  .navigation-list {
+  &__nav {
     grid-column: span 1;
     margin-right: 2rem;
 
@@ -44,7 +44,7 @@
   }
 
   &__content {
-    grid-column: span 7;
+    grid-column: 2 / 8;
 
     @include mq('custom', 'max', 1024) {
       grid-column: auto;
