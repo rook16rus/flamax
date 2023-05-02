@@ -27,5 +27,10 @@
 
   &__link {
     flex-shrink: 0;
+    height: 5.2rem;
+
+    @include mq('custom', 'max', 640) {
+      height: 4rem;
+    }
   }
 }

@@ -179,6 +179,8 @@
   .meta-item {
     margin-right: 2.4rem;
     margin-bottom: 1rem;
+
+    font-size: 1.4rem;
   }
 
   &__card-title {
@@ -188,6 +190,7 @@
 
   &__card-link {
     align-self: flex-start;
+    font-family: "Intro Bold", sans-serif;
   }
 
   &__slider-container {

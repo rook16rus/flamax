@@ -1,7 +1,7 @@
 mixin section-header(title, count, isGallery)
   header.section-header&attributes(attributes)
     h2.section-header__title(data-count=count)!= title
-    a.section-header__link.button.button--medium.button--bordered(href="#")
+    a.section-header__link.button.button--big.button--bordered(href="#")
       if isGallery
         | ВСЕ ФОТОГРАФИИ
       else
