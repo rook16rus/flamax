@@ -52,6 +52,9 @@
   }
 
   .navigation-list {
+    position: fixed;
+    z-index: 2;
+
     margin-right: 2rem;
     grid-column: span 1;
 
@@ -61,7 +64,7 @@
   }
 
   &__content {
-    grid-column: span 7;
+    grid-column: 2 / 8;
 
     @include mq('custom', 'max', 1024) {
       grid-column: auto;

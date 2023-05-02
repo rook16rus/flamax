@@ -25,6 +25,9 @@
   }
 
   .navigation-list {
+    position: fixed;
+    z-index: 2;
+
     grid-column: span 1;
     margin-right: 2rem;
 
@@ -34,7 +37,7 @@
   }
 
   &__content {
-    grid-column: span 7;
+    grid-column: 2 / 8;
     max-width: 120rem;
 
     @include mq('custom', 'max', 1024) {

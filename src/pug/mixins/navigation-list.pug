@@ -1,5 +1,5 @@
 mixin navigation-list(data)
-  ul.navigation-list
+  ul.navigation-list&attributes(attributes)
     for item in data
       li.navigation-list__item(class=`${item.active ? "active" : ""}`)
         a.navigation-list__link(href="#")
