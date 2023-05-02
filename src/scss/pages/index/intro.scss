@@ -20,7 +20,7 @@
     align-items: flex-start;
 
     @include mq('custom', 'max', 1024) {
-      grid-template-columns: 1fr;
+      display: block;
     }
   }
 
@@ -41,6 +41,7 @@
     max-width: 120rem;
 
     @include mq('custom', 'max', 1024) {
+      grid-column: auto;
       max-width: none;
       display: flex;
       flex-direction: column;
@@ -80,6 +81,10 @@
     font-size: 9rem;
     text-transform: uppercase;
     color: var(--primary-color);
+
+    @include mq('custom', 'max', 1024) {
+      font: var(--title-h1);
+    }
 
     @include mq('custom', 'max', 768) {
       margin-top: 0;

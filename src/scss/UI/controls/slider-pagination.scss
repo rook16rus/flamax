@@ -2,6 +2,8 @@
   display: flex;
 
   .swiper-pagination-bullet {
+    position: relative;
+
     transform: scale(1) !important;
 
     flex-grow: 1;
@@ -10,12 +12,26 @@
 
     background-color: rgba(255, 255, 255, 0.2);
     opacity: 1;
+    overflow: hidden;
 
     transition: 0.3s;
 
     &-active {
       background-color: #fff;
     }
+  }
+
+  &__bullet-progressbar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: #fff;
   }
 
   &--black {

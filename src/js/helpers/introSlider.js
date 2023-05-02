@@ -7,6 +7,8 @@ export default function introSlider() {
   const intro = document.querySelector('.intro');
   if (!intro) return
 
+  const tl = gsap.timeline();
+
   const swiper = new Swiper('.intro__slider', {
     slidesPerView: 1,
     spaceBetween: 15,
@@ -14,15 +16,32 @@ export default function introSlider() {
       nextEl: intro.querySelector('.js-next-slide'),
       prevEl: intro.querySelector('.js-prev-slide'),
     },
+    autoplay: {
+      delay: 10000,
+      waitForTransition: false,
+      disableOnInteraction: false
+    },
     pagination: {
       type: "bullets",
-      el: intro.querySelector('.slider-pagination')
+      el: intro.querySelector('.slider-pagination'),
+      renderBullet: (index, className) => {
+        return `<span class="${className}"><div class="slider-pagination__bullet-progressbar"></div></span>`
+      }
     }
   })
 
-  const tl = gsap.timeline();
+  runProgressbar();
+  swiper.on('slideChangeTransitionStart', runProgressbar);
 
-  swiper.on('slideChangeTransitionStart', () => {
+  function runProgressbar() {
+    tl.restart();
+    tl.clear();
 
-  });
+    const progressbar = intro.querySelector('.swiper-pagination-bullet-active .slider-pagination__bullet-progressbar');
+    tl.to(progressbar, {
+      transform: "scaleX(1)",
+      duration: 10,
+      ease: "none"
+    })
+  }
 }
