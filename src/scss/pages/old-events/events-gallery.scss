@@ -2,6 +2,20 @@
   background-color: #F3F5F8;
 
   .section-header {
+    margin-bottom: 5.6rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 4.4rem;
+    }
+
+    @include mq('custom', 'max', 768) {
+      margin-bottom: 3.4rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2.4rem;
+    }
+
     &__title {
       max-width: 37rem;
     }
@@ -51,6 +65,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: top;
     }
   }
 

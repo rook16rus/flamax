@@ -62,7 +62,7 @@ section.events.page-section.js-intro-block
             while i < 11
               a.events__pagination-number(class=`${i === 1 ? 'active' : ''}${i > 4 ? ' hide' : ''}` href="#")= i++
           .events__pagination-arrows
-            a.events__pagination-arrow(href="#")
+            a.events__pagination-arrow.events__pagination-arrow--disabled(href="#")
               +icon-multi('slider-arrow')
             a.events__pagination-arrow(href="#")
               +icon-multi('slider-arrow')

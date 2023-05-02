@@ -30,6 +30,9 @@
 
   &__item {
     position: relative;
+
+    display: flex;
+    flex-direction: column;
   }
 
   &__item-img {
@@ -61,6 +64,9 @@
   }
 
   &__item-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     padding: 3.6rem 3.2rem 2.6rem;
     background-color: #fff;
 
@@ -110,6 +116,7 @@
     grid-template-columns: 1fr auto;
     align-items: flex-end;
     gap: 2rem;
+    margin-top: auto;
 
     @include mq('custom', 'max', 768) {
       display: block;

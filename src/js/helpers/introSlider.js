@@ -1,4 +1,5 @@
 import Swiper, {Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode} from "swiper/swiper-bundle";
+import gsap from 'gsap';
 
 Swiper.use([Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode]);
 
@@ -18,4 +19,10 @@ export default function introSlider() {
       el: intro.querySelector('.slider-pagination')
     }
   })
+
+  const tl = gsap.timeline();
+
+  swiper.on('slideChangeTransitionStart', () => {
+
+  });
 }

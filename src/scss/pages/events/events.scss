@@ -44,7 +44,7 @@
   }
 
   &__content {
-    grid-column: span 7;
+    grid-column: span 6;
 
     @include mq('custom', 'max', 1024) {
       grid-column: auto;
@@ -137,6 +137,13 @@
   }
 
   &__pagination-arrow {
+    &--disabled {
+      opacity: 0.6;
+
+      pointer-events: none;
+      cursor: default;
+    }
+
     &:first-child {
       transform: rotate(180deg);
     }

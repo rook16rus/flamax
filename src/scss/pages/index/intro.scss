@@ -1,6 +1,17 @@
 .intro {
+  margin-bottom: 14.4rem;
+
   @include mq('custom', 'max', 1024) {
+    margin-bottom: 9.8rem;
     margin-top: 0;
+  }
+
+  @include mq('custom', 'max', 768) {
+    margin-bottom: 7.4rem;
+  }
+
+  @include mq('custom', 'max', 640) {
+    margin-bottom: 5rem;
   }
 
   &__wrapper {
@@ -79,7 +90,7 @@
     font: var(--title-h5);
 
     @include mq('custom', 'max', 640) {
-      nav-banner-image: 1.6rem;
+      margin-bottom: 1.6rem;
     }
   }
 
@@ -89,6 +100,11 @@
     gap: 2rem;
 
     font: var(--text-t2);
+    font-size: 1.6rem;
+
+    @include mq('custom', 'max', 1024) {
+      font: var(--text-t2);
+    }
   }
 
   &__card {
@@ -220,6 +236,27 @@
   .slider-navigation {
     @include mq('custom', 'max', 768) {
       display: none;
+    }
+  }
+
+  .slider-pagination {
+    .swiper-pagination-bullet {
+      position: relative;
+
+      background-color: rgba(255, 255, 255, 0.2);
+
+      &::before {
+        content: '';
+
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        width: var(--autoplay-progress);
+        height: 100%;
+
+        background-color: #fff;
+      }
     }
   }
 }

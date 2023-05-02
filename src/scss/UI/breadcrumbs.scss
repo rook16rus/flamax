@@ -1,9 +1,19 @@
 .breadcrumbs {
+  position: relative;
+
   display: flex;
   align-items: center;
 
+  overflow-x: auto;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+
   font: var(--text-t4);
   text-transform: uppercase;
+
+  &::-webkit-scrollbar {
+    opacity: 0;
+  }
 
   &__container {
     overflow-x: auto;
@@ -33,6 +43,7 @@
     flex-shrink: 0;
 
     &:last-of-type {
+
       opacity: 0.25;
       cursor: default;
       pointer-events: none;

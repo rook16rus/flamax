@@ -27,17 +27,9 @@
   }
 
   &__content-slider {
-    @include mq('custom', 'max', 1024) {
-
-    }
-
     @include mq('custom', 'max', 768) {
       width: 90%;
       margin: 0;
-    }
-
-    @include mq('custom', 'max', 640) {
-
     }
   }
 
@@ -75,14 +67,6 @@
     font: var(--text-t4);
     text-transform: uppercase;
 
-    @include mq('custom', 'max', 1024) {
-
-    }
-
-    @include mq('custom', 'max', 768) {
-
-    }
-
     @include mq('custom', 'max', 640) {
       margin-bottom: 1.6rem;
     }
@@ -114,14 +98,6 @@
     margin-bottom: 2.4rem;
 
     font: var(--text-t1);
-
-    @include mq('custom', 'max', 1024) {
-
-    }
-
-    @include mq('custom', 'max', 768) {
-
-    }
 
     @include mq('custom', 'max', 640) {
       margin-bottom: 1.6rem;
