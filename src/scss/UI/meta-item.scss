@@ -4,7 +4,8 @@
   align-items: center;
   gap: 0.8rem;
 
-  font: var(--text-t3);
+  font: var(--text-t2);
+  font-size: 1.4rem;
 
   @include mq('custom', 'max', 640) {
     font: var(--text-t4);

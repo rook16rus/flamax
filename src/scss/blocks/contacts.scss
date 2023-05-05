@@ -82,11 +82,22 @@
 
   &__email {
     display: flex;
+    margin-bottom: 5.6rem;
 
     font: var(--text-t1);
     text-decoration: underline;
     color: var(--primary-color);
     text-underline-offset: 0.5rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__path {
+    @include mq('custom', 'max', 1024) {
+      display: none;
+    }
   }
 
   &__map {

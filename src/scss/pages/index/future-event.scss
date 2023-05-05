@@ -4,7 +4,7 @@
 
     display: grid;
     grid-template-columns: auto 1fr;
-    align-items: center;
+    align-items: flex-start;
     gap: 3.2rem;
 
     @include mq('custom', 'max', 1024) {

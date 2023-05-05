@@ -80,7 +80,7 @@
     font: var(--title-h1);
     font-size: 9rem;
     text-transform: uppercase;
-    color: var(--primary-color);
+    color: #BE3D3D;
 
     @include mq('custom', 'max', 1024) {
       font: var(--title-h1);
