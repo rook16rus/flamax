@@ -28,7 +28,22 @@
   }
 
   &__slider {
+    position: relative;
     overflow: visible;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      right: 100%;
+      z-index: 2;
+
+      height: 100%;
+      width: 400%;
+
+      background-color: #F3F5F8;
+    }
   }
 
   &__slide {

@@ -49,6 +49,8 @@
 
   &__accordion-title {
     margin-right: 2rem;
+    flex-shrink: 5;
+
     font: var(--title-h3);
   }
 
@@ -95,6 +97,8 @@
   &__accordion-button {
     width: 1.6rem;
     height: 1.6rem;
+
+    flex-shrink: 0;
 
     opacity: 0.25;
 
@@ -243,7 +247,7 @@
     }
   }
 
-  &__accordion-item-time {
+  &__accordion-time {
     flex-shrink: 0;
   }
 

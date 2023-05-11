@@ -6,6 +6,11 @@
   font: var(--text-t4);
   text-transform: uppercase;
 
+  @include mq('custom', 'max', 1150) {
+    display: none;
+  }
+
+
   &__item {
     &.active {
       font-family: "Intro Bold", sans-serif;
