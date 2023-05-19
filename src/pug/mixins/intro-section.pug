@@ -9,9 +9,9 @@
 
 -
   const timerNumbers = [
-    {digit: "12", desc: "дней"},
-    {digit: "8", desc: "часов"},
-    {digit: "56", desc: "минут"},
+    {digit: "12", desc: "дней", jsClass: "js-days"},
+    {digit: "8", desc: "часов", jsClass: "js-hours"},
+    {digit: "56", desc: "минут", jsClass: "js-minutes"},
   ]
 
 -
@@ -41,10 +41,10 @@ mixin intro-section(img, isTimer, mod)
                   .intro-section__timer-desc
                     +icon-multi("time-icon")
                     span до начала
-                  .intro-section__timer-numbers
+                  .intro-section__timer-numbers.js-init-timer(data-date="2023-05-26")
                     for item in timerNumbers
                       .intro-section__timer-number
-                        span.intro-section__timer-number-digit= item.digit
+                        span.intro-section__timer-number-digit(class=item.jsClass)= item.digit
                         span.intro-section__timer-number-desc= item.desc
                 .intro-section__timer-text
                   p

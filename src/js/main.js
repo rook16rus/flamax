@@ -27,6 +27,7 @@ import introTopOffset from "./helpers/introTopOffset";
 import eventsGallerySlider from "./helpers/eventsGallerySlider";
 import sticky from "./helpers/sticky";
 import tabsSwipe from "./helpers/tabsSwipe";
+import timer from "./helpers/timer";
 
 documenReady(() => {
   window.project_API = { };
@@ -54,6 +55,7 @@ documenReady(() => {
   eventsGallerySlider();
   sticky();
   tabsSwipe();
+  timer();
 });
 
 document.fonts.ready.then((res) => {

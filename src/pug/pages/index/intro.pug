@@ -28,14 +28,17 @@
     {
       number: "12",
       desc: "дней",
+      jsClass: "js-days"
     },
     {
       number: "8",
       desc: "часов",
+      jsClass: "js-hours"
     },
     {
       number: "56",
       desc: "минут",
+      jsClass: "js-minutes"
     },
   ]
 
@@ -76,10 +79,10 @@ section.intro.page-section.page-section--first
             .intro__card-time
               span.intro__card-time-desc
                 | До начала
-              ul.intro__card-time-list
+              ul.intro__card-time-list.js-init-timer(data-date="2023-05-22")
                 for item in introTimer
                   li.intro__card-time-item
-                    span.intro__card-time-item-number= item.number
+                    span.intro__card-time-item-number(class=item.jsClass)= item.number
                     span.intro__card-time-item-desc= item.desc
             .intro__card-meta
               for item in introMeta
