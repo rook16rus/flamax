@@ -12,7 +12,7 @@ import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin';
 gsap.registerPlugin(ScrollToPlugin);
 
 export default function anchorLinks() {
-    const OFFSET = 80;
+    const OFFSET = 150;
     const DURATION = 2;
     const scrollByHash = (hash) => {
       let elementToScroll;
@@ -56,11 +56,26 @@ export default function anchorLinks() {
             if (hash) {
                 event.preventDefault();
                 scrollByHash(hash);
+
+              const links = document.querySelectorAll('a');
+
+              links.forEach(link => {
+                link.classList.remove('active');
+              })
+
+              link.classList.add('active');
+
+              //localStorage.setItem("activeItem", hash);
             }
         }
     });
 
     if (window.location.hash) {
         scrollByHash(window.location.hash);
+
+        document.querySelectorAll("a").forEach(link => link.classList.remove('active'))
+
+      const activeLink = document.querySelector(`a[href="${window.location.hash}"]`);
+      activeLink.classList.add('active')
     }
 }

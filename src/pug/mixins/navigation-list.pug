@@ -1,8 +1,7 @@
 mixin navigation-list(data)
   ul.navigation-list&attributes(attributes)
     for item in data
-      li.navigation-list__item(class=`${item.active ? "active" : ""}`)
-        a.navigation-list__link(href="#")
-          if item.active
-            +icon-multi("slider-arrow")
+      li.navigation-list__item
+        a.navigation-list__link(class=`${item.active ? "active" : ""}` href=item.link)
+          +icon-multi("slider-arrow")
           span= item.text
