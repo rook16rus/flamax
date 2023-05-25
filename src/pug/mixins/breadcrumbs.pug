@@ -1,6 +1,6 @@
 mixin breadcrumbs(levels, mod)
-  .breadcrumbs__container&attributes(attributes).site-content-container
-    div(class=`breadcrumbs ${mod ? mod : ''}`)
+  .breadcrumbs-block__container&attributes(attributes).site-content-container
+    div(class=`breadcrumbs-block ${mod ? mod : ''}`)
       each item, index in levels
 
         - var count = index+1
@@ -8,13 +8,13 @@ mixin breadcrumbs(levels, mod)
         - var link = item[1] || null
 
         if link
-          .breadcrumbs__item
-            a.breadcrumbs__item-link.page-hover-effect(href=link) #{name}
+          .breadcrumbs-block__item
+            a.breadcrumbs-block__item-link.page-hover-effect(href=link) #{name}
         else
-          .breadcrumbs__item
+          .breadcrumbs-block__item
             span
               | #{name}
         //- для иконки между ссылкой
         if count < levels.length
-          span.breadcrumbs__arrow
+          span.breadcrumbs-block__arrow
 

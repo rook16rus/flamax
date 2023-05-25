@@ -13,7 +13,7 @@
       order: 1;
     }
 
-    .breadcrumbs {
+    .breadcrumbs-block {
       margin-top: 1.6rem;
 
       @include mq('custom', 'max', 768) {
@@ -70,7 +70,7 @@
     }
   }
 
-  .breadcrumbs {
+  .breadcrumbs-block {
     @include mq('custom', 'max', 768) {
       margin-top: 1rem;
     }

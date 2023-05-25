@@ -13,17 +13,17 @@ export default function header() {
   })*/
 
 
-  if (intro) {
-    intro.style.setProperty('--header-height', header.clientHeight + 'px');
-  } else {
-    pageWrapper.style.setProperty('--header-height', header.clientHeight + 'px');
-  }
+  // if (intro) {
+  //   intro.style.setProperty('--header-height', header.clientHeight + 'px');
+  // } else {
+  //   pageWrapper.style.setProperty('--header-height', header.clientHeight + 'px');
+  // }
 
-  window.addEventListener('scroll', () => {
-    if (header.getBoundingClientRect().top > document.documentElement.getBoundingClientRect().top) {
-      header.classList.add('header--fixed');
-    } else {
-      header.classList.remove('header--fixed');
-    }
-  });
+  // window.addEventListener('scroll', () => {
+  //   if (header.getBoundingClientRect().top > document.documentElement.getBoundingClientRect().top) {
+  //     header.classList.add('header--fixed');
+  //   } else {
+  //     header.classList.remove('header--fixed');
+  //   }
+  // });
 }
