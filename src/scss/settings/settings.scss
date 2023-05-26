@@ -9,7 +9,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: 10px;
+  font-size: 9px;
   -webkit-text-size-adjust: 100%;
 
   @include noHighlight();
@@ -321,7 +321,7 @@ a:focus {
   color: var(--heading-color);
 }
 
-.container {
+.container-block {
   width: 100%;
   max-width: calc(var(--max-container-width) + 2 * var(--content-padding));
   margin: 0 auto;

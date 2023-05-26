@@ -1,5 +1,7 @@
 export default function header() {
   const header = document.querySelector('.header');
+  if (!header) return
+
   const pageWrapper = document.querySelector('.page-wrapper');
   const intro = document.querySelector('.js-intro-block');
 
