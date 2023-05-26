@@ -75,7 +75,9 @@ export default function anchorLinks() {
 
         document.querySelectorAll("a").forEach(link => link.classList.remove('active'))
 
-      const activeLink = document.querySelector(`a[href="${window.location.hash}"]`);
-      activeLink.classList.add('active')
+        const activeLink = document.querySelector(`a[href="${window.location.hash}"]`);
+        if (activeLink) {
+          activeLink.classList.add('active')
+        }
     }
 }
