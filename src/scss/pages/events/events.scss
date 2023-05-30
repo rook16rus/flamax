@@ -140,5 +140,11 @@
     &:first-child {
       transform: rotate(180deg);
     }
+
+    &--disabled {
+      opacity: 0.2;
+      pointer-events: none;
+      cursor: default;
+    }
   }
 }

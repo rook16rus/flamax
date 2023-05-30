@@ -101,6 +101,8 @@
   }
 
   &__map {
+    position: relative;
+
     grid-column: span 4;
     height: 52.2rem;
 
@@ -116,16 +118,35 @@
       overflow: hidden;
     }
 
-    @include mq('custom', 'max', 768) {
-
-
-    }
-
     @include mq('custom', 'max', 640) {
       left: -1.8rem;
 
       height: 24.5rem;
       width: calc(100% + 3.6rem);
+    }
+  }
+
+  &__map-icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 8rem;
+
+    background-color: #fff;
+
+    @include mq('custom', 'max', 768) {
+      display: none;
+    }
+
+    svg {
+      width: 4rem;
+      height: 4rem;
     }
   }
 }
