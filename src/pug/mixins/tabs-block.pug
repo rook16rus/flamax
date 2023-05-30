@@ -1,9 +1,10 @@
-mixin tabs-block(data, isRegistration)
+mixin tabs-block(data, isRegistration, isTabIconDeleted)
   .tabs-block.js-tabs-container&attributes(attributes)(data-tabs-like-radio="true")
     .tabs-block__tabs
       each item, index in data
         button.tabs-block__tab.js-tab(class=`${item.active ? 'tab-active' : ''}` data-href=`tabContent${index}`)
-          +icon-multi(item.icon)
+          unless isTabIconDeleted
+            +icon-multi(item.icon)
           span= item.title
     .tabs-block__contents
       each item, index in data
