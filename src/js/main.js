@@ -40,7 +40,7 @@ documenReady(() => {
   setScrollbarWidth();
   anchorLinks();
   validation();
-  masks();
+  // masks();
   fancybox();
   yandexMap();
   fileInputs();
