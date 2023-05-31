@@ -490,14 +490,21 @@ a:focus {
   &::after {
     content: attr(data-count);
 
+    position: absolute;
+    bottom: 2.4rem;
+    left: calc(100%);
+
     margin-left: 0.6rem;
-    margin-top: -.5rem;
 
     font: var(--text-t2);
     color: rgba(0, 0, 0, 0.25);
 
     @include mq('custom', 'max', 640) {
       margin-left: 0.4rem;
+    }
+
+    @include mq('custom', 'max', 350) {
+      display: none;
     }
   }
 }
