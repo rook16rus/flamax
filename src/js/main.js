@@ -44,7 +44,7 @@ documenReady(() => {
   fancybox();
   yandexMap();
   fileInputs();
-  inputPlaceholder();
+  // inputPlaceholder();
   customSelects();
   accordions();
   introSlider();
