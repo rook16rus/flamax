@@ -51,6 +51,7 @@
   &__content-wrapper {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    align-items: flex-start;
     margin-bottom: 3.2rem;
 
     @include mq('custom', 'max', 1024) {
@@ -171,7 +172,6 @@
   &__card-meta {
     display: flex;
     flex-wrap: wrap;
-    margin-top: auto;
     margin-right: -2.4rem;
     margin-bottom: 0.8rem;
   }
@@ -190,7 +190,6 @@
 
   &__card-link {
     align-self: flex-start;
-    font-family: "Intro Bold", sans-serif;
   }
 
   &__slider-container {

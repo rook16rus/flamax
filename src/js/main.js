@@ -28,6 +28,7 @@ import eventsGallerySlider from "./helpers/eventsGallerySlider";
 import sticky from "./helpers/sticky";
 import tabsSwipe from "./helpers/tabsSwipe";
 import timer from "./helpers/timer";
+import navigationList from "./helpers/navigationList";
 
 documenReady(() => {
   window.project_API = { };
@@ -59,7 +60,7 @@ documenReady(() => {
 });
 
 document.fonts.ready.then((res) => {
-
+  navigationList();
 })
 
 window.addEventListener('load', function () {
