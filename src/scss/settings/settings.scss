@@ -334,7 +334,8 @@ a:focus {
 
 .wide-container {
   width: 100%;
-  max-width: calc(var(--max-wide-container-width) + 2 * var(--content-padding));
+  //max-width: calc(var(--max-wide-container-width) + 2 * var(--content-padding));
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 var(--content-padding);
   @supports (width: max(20vw, 100px)) {

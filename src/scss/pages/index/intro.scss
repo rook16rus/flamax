@@ -37,8 +37,8 @@
   }
 
   &__content {
-    grid-column: 2 / 8;
-    max-width: 120rem;
+    grid-column: 2 / 9;
+    //max-width: 120rem;
 
     @include mq('custom', 'max', 1024) {
       grid-column: auto;
