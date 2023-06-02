@@ -7,11 +7,7 @@
     @include mq('custom', 'max', 1024) {
       grid-template-columns: 1fr;
       align-items: stretch;
-      gap: 3.2rem;
-    }
-
-    @include mq('custom', 'max', 640) {
-      gap: 2.4rem;
+      gap: 0;
     }
   }
 
@@ -20,6 +16,7 @@
 
     @include mq('custom', 'max', 1024) {
       grid-column: auto;
+      display: contents;
     }
   }
 
@@ -90,13 +87,25 @@
     text-underline-offset: 0.5rem;
 
     @include mq('custom', 'max', 1024) {
-      margin-bottom: 0;
+      margin-bottom: 3.2rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      margin-bottom: 2.4rem;
     }
   }
 
   &__path {
     @include mq('custom', 'max', 1024) {
-      display: none;
+      order: 1;
+
+      width: 15rem;
+      margin-top: 3.2rem;
+    }
+
+    @include mq('custom', 'max', 640) {
+      width: 100%;
+      margin-top: 2.4rem;
     }
   }
 
