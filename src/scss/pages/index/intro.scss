@@ -1,8 +1,8 @@
 .intro {
+  padding-top: var(--header-height);
   margin-bottom: 14.4rem;
 
   @include mq('custom', 'max', 1024) {
-    padding-top: var(--header-height);
     margin-bottom: 9.8rem;
     margin-top: 0;
   }
