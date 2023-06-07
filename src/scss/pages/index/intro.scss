@@ -72,10 +72,16 @@
   }
 
   &__content-left {
-    grid-column: span 3;
+    grid-column: span 4;
+    padding-right: 2rem;
+
+    @include mq('custom', 'max', 768) {
+      padding-right: 0;
+    }
   }
 
   &__title {
+    max-width: 78rem;
     margin-bottom: 1.6rem;
     margin-top: -0.8rem;
 
