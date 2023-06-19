@@ -123,6 +123,8 @@
   &__item-text {
     font: var(--text-t1);
 
+    @include maxSizeText(4);
+
     @include mq('custom', 'max', 768) {
       display: none;
     }

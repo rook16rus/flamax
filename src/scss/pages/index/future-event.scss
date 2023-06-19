@@ -108,8 +108,6 @@
 
     font: var(--text-t2);
 
-    @include maxSizeText(3);
-
     @include mq('custom', 'max', 1024) {
       margin-bottom: 2.8rem;
     }
