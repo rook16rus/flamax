@@ -5,17 +5,22 @@ export default function contactsMap() {
   if (!map) return;
 
   const url = `https://api-maps.yandex.ru/2.1/?apikey=${map.dataset.apiKey}&lang=ru_RU`;
-  loadApi('yandex', url, () => {
-    ymaps.ready(init);
+  loadApi('yandex', url, async () => {
+    const url = map.dataset.url;
+
+    const request = await fetch(url);
+    const json  = await request.json();
+
+    ymaps.ready(() => {
+      init(json);
+    })
   })
 
-  function init() {
+  function init(data) {
     const mapElement = document.querySelector('#map');
     const zoom = mapElement.dataset.zoom;
     const marker = mapElement.dataset.marker;
     const coords = mapElement.dataset.coordinates.split(',');
-    const office = mapElement.dataset.office;
-    const address = mapElement.dataset.address;
 
     map = new ymaps.Map('map', {
       center: [+coords[0], +coords[1] + 0.0002],
@@ -33,7 +38,25 @@ export default function contactsMap() {
     map.controls.remove('rulerControl'); // удаляем контрол правил
     map.controls.remove('zoomControl'); // удаляем контрол зума
 
-    addMarker([...coords], map, marker, office, address);
+    const clusterer = new ymaps.Clusterer({
+      groupByCoordinates: false,
+      clusterDisableClickZoom: false,
+      clusterHideIconOnBalloonOpen: false,
+      geoObjectHideIconOnBalloonOpen: false,
+      preset: 'islands#invertedRedClusterIcons'
+    })
+
+    data.forEach(place => {
+      clusterer.add(addMarker(
+        place.coords.split(','),
+        map,
+        marker,
+        place.office,
+        place.address
+      ));
+    })
+
+    map.geoObjects.add(clusterer);
   }
 
   function addMarker(coords, map, markerIcon, office, address) {
@@ -52,6 +75,6 @@ export default function contactsMap() {
       hideIconOnBalloonOpen: false
     });
 
-    map.geoObjects.add(marker);
+    return marker
   }
 }
