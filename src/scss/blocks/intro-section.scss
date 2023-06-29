@@ -248,7 +248,7 @@
 
     font: var(--text-t1);
 
-    @include maxSizeText(7);
+    @include maxSizeText(9);
 
     @include mq('custom', 'max', 768) {
       display: grid;

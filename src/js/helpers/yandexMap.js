@@ -52,19 +52,21 @@ export default function contactsMap() {
         map,
         marker,
         place.office,
-        place.address
+        place.address,
+        place.link
       ));
     })
 
     map.geoObjects.add(clusterer);
   }
 
-  function addMarker(coords, map, markerIcon, office, address) {
+  function addMarker(coords, map, markerIcon, office, address, link) {
     const marker = new ymaps.Placemark(coords, {
       balloonContent: `
           <div class="balloon">
             <div class="balloon__office">${office}</div>
             <address class="balloon__address">${address}</address>
+            <a class="balloon__link button button--big button--red" href="${link}">Подробнее</a>
           </div>
       `
     }, {
