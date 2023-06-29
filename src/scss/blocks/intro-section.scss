@@ -143,12 +143,12 @@
     display: flex;
     flex-direction: column;
     width: 47.9rem;
-    padding: 4.8rem;
+    padding: 4.8rem 4.8rem 0;
 
     background-color: #fff;
 
     @include mq('custom', 'max', 1024) {
-      padding: 3.6rem;
+      padding: 3.6rem 3.6rem 0;
     }
 
     @include mq('custom', 'max', 768) {
@@ -248,7 +248,7 @@
 
     font: var(--text-t1);
 
-    @include maxSizeText(9);
+    @include maxSizeText(11);
 
     @include mq('custom', 'max', 768) {
       display: grid;
