@@ -4,7 +4,7 @@
   gap: 2rem;
 
   font: var(--text-t4);
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-transform: uppercase;
 
   @include mq('custom', 'max', 1150) {
@@ -26,6 +26,10 @@
         margin-right: 0.8rem;
         transform: scaleX(1);
       }
+    }
+
+    &--big {
+      font-size: 1.2rem;
     }
 
     svg {

@@ -12,7 +12,7 @@ section.events-gallery.page-section.page-section--inner
       .swiper-wrapper
         for item in eventsGallery
           .events-gallery__slide.swiper-slide(data-fancybox="1" data-src=`assets/images/${item.img}`)
-            +pictureLazy(item.img)
+            +picture(item.img)
       +slider-navigation('slider-navigation--white-color slider-navigation--large')
       .swiper-scrollbar
     a.events-gallery__link.button.button--medium.button--bordered(href="#")
