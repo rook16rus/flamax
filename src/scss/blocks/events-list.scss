@@ -84,12 +84,6 @@
 
   &__item-content {
     grid-column: span 3;
-    height: 20rem;
-    overflow: hidden;
-
-    @include mq('custom', 'max', 768) {
-      height: auto;
-    }
   }
 
   &__item-meta {
