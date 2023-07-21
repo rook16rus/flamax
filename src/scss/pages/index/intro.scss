@@ -40,6 +40,7 @@
   &__content {
     grid-column: 2 / 9;
     //max-width: 120rem;
+    margin-left: 2rem;
 
     @include mq('custom', 'max', 1024) {
       grid-column: auto;
@@ -220,13 +221,18 @@
     cursor: pointer;
 
 
-    @include mq('custom', 'max', 640) {
-      padding-top: 81.33%;
+    @include mq('custom', 'max', 1024) {
+      padding-top: 0;
     }
 
     img {
       @extend .fully-filled-el;
       object-fit: cover;
+
+      @include mq('custom', 'max', 1024) {
+        object-fit: contain;
+        position: static;
+      }
     }
   }
 

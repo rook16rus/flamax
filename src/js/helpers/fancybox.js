@@ -5,14 +5,6 @@ export default function fancybox() {
   Fancybox.bind('[data-fancybox]', {
     Image: {
       zoom: false
-    },
-    on: {
-      init() {
-        disableScroll()
-      },
-      destroy() {
-        enableScroll()
-      }
     }
   })
 }

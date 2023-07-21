@@ -57,8 +57,8 @@
 -
   const introSlider = [
     "intro-1.jpg",
-    "intro-1.jpg",
-    "intro-1.jpg",
+    "intro-2.jpg",
+    "intro-3.jpg",
   ]
 
 section.intro.page-section.page-section--first.js-intro-block#intro
@@ -96,7 +96,7 @@ section.intro.page-section.page-section--first.js-intro-block#intro
             .swiper-wrapper
               for item in introSlider
                 .intro__slide.swiper-slide(data-fancybox="intro" data-src=`assets/images/${item}`)
-                  +pictureLazy(item, "Фото")
+                  +picture(item, "Фото")
             .intro__slider-navigation
               +slider-navigation('slider-navigation--white-transparent')
               .slider-pagination

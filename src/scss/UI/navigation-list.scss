@@ -1,10 +1,12 @@
 .navigation-list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 2.5rem;
+  max-width: 17rem;
 
   font: var(--text-t4);
-  font-size: 1rem;
+  font-size: 12px;
+  line-height: 1.3;
   text-transform: uppercase;
 
   @include mq('custom', 'max', 1150) {
@@ -29,7 +31,7 @@
     }
 
     &--big {
-      font-size: 1.2rem;
+      font-size: 12px;
     }
 
     svg {
