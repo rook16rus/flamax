@@ -183,7 +183,7 @@
   &__accordion-img {
     width: 18rem;
     height: 13rem;
-    margin-right: 3rem;
+    margin: 1.6rem 3rem 1.6rem 0;
 
     border-radius: 10rem;
     overflow: hidden;
@@ -191,8 +191,7 @@
     @include mq('custom', 'max', 768) {
       width: 34rem;
       height: 22.6rem;
-      margin-right: 0;
-      margin-bottom: 1.6rem;
+      margin: 0 0 1.6rem;
 
       border-radius: 100rem;
     }
@@ -209,6 +208,7 @@
   }
 
   &__accordion-item-content {
+    align-self: stretch;
     max-width: 65.4rem;
     padding: 3rem 4.6rem 3rem 0;
     flex-grow: 1;

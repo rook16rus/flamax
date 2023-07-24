@@ -326,13 +326,14 @@ a:focus {
   max-width: calc(var(--max-container-width) + 2 * var(--content-padding));
   margin: 0 auto;
   padding: 0 var(--content-padding);
+
   @supports (width: max(20vw, 100px)) {
     padding-left: max(env(safe-area-inset-left, 1.4rem), 6rem);
     padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
   }
 
-  @include mq('custom', 'max', 1024px) {
-    padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding));;
+  @include mq('custom', 'max', 1024) {
+    padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding));
   }
 }
 

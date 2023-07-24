@@ -13,6 +13,8 @@
   font: var(--text-t3);
   text-transform: uppercase;
 
+  transition: 0.3s ease border-color;
+
   &::before {
     content: '';
 
@@ -98,6 +100,12 @@
 
   &--red-bordered {
     border: 1px solid var(--primary-color);
+
+    @include mq('custom', 'min', 1025) {
+      &:hover {
+        border-color: transparent;
+      }
+    }
   }
 
   &--red {
@@ -108,6 +116,12 @@
   &--bordered {
     border: 1px solid var(--stroke-black-color);
     color: var(--black-color);
+
+    @include mq('custom', 'min', 1025) {
+      &:hover {
+        border-color: transparent;
+      }
+    }
   }
 
   &--transparent-bordered {
