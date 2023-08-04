@@ -33,7 +33,7 @@
     transition: 0.3s ease all;
   }
 
-  @include mq('custom', 'min', 1025) {
+  /*@include mq('custom', 'min', 1025) {
     &:hover {
       color: #fff;
 
@@ -42,7 +42,7 @@
         z-index: -2;
       }
     }
-  }
+  }*/
 
   &--large {
     height: 5.9rem;
@@ -117,11 +117,11 @@
     border: 1px solid var(--stroke-black-color);
     color: var(--black-color);
 
-    @include mq('custom', 'min', 1025) {
+    /*@include mq('custom', 'min', 1025) {
       &:hover {
         border-color: transparent;
       }
-    }
+    }*/
   }
 
   &--transparent-bordered {
