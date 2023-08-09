@@ -33,16 +33,14 @@
     transition: 0.3s ease all;
   }
 
-  /*@include mq('custom', 'min', 1025) {
-    &:hover {
-      color: #fff;
+  &:hover {
+    color: #fff;
 
-      &::before {
-        transform: translate(-50%,-7rem);
-        z-index: -2;
-      }
+    &::before {
+      transform: translate(-50%,-7rem);
+      z-index: -2;
     }
-  }*/
+  }
 
   &--large {
     height: 5.9rem;
@@ -87,10 +85,6 @@
       width: 3.4rem;
       height: 3.4rem;
     }
-
-    svg {
-      // ?
-    }
   }
 
   &--medium {
@@ -101,10 +95,8 @@
   &--red-bordered {
     border: 1px solid var(--primary-color);
 
-    @include mq('custom', 'min', 1025) {
-      &:hover {
-        border-color: transparent;
-      }
+    &:hover {
+      border-color: transparent;
     }
   }
 
@@ -117,11 +109,9 @@
     border: 1px solid var(--stroke-black-color);
     color: var(--black-color);
 
-    /*@include mq('custom', 'min', 1025) {
       &:hover {
         border-color: transparent;
       }
-    }*/
   }
 
   &--transparent-bordered {
