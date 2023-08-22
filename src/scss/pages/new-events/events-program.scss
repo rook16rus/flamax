@@ -232,6 +232,9 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+  }
+
+  &__accordion-content-header-left {
     margin-bottom: 3.6rem;
 
     @include mq('custom', 'max', 1024) {
