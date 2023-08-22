@@ -215,4 +215,13 @@
       display: none;
     }
   }
+
+  .slider-pagination {
+    display: none;
+
+    @include mq('custom', 'max', 768) {
+      display: flex;
+      margin-top: 3rem;
+    }
+  }
 }

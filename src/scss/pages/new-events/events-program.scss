@@ -256,11 +256,14 @@
 
   &__accordion-subtitle {
     margin-bottom: 0.4rem;
+
     font: var(--title-h6);
+    font-size: 16px;
   }
 
   &__accordion-position {
     font: var(--text-t2);
+    font-size: 16px;
     color: #A5A6A8;
   }
 
@@ -271,5 +274,6 @@
     max-width: 47.1rem;
 
     font: var(--text-t2);
+    font-size: 16px;
   }
 }

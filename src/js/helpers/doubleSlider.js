@@ -22,6 +22,13 @@ export default function doubleSlider() {
           slidesPerView: 1,
           autoHeight: false
         }
+      },
+      pagination: {
+        type: "bullets",
+        el: thumbSlider.querySelector('.slider-pagination'),
+        renderBullet: (index, className) => {
+          return `<span class="${className}"><div class="slider-pagination__bullet-progressbar"></div></span>`
+        }
       }
     })
 
