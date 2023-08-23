@@ -68,7 +68,7 @@ window.addEventListener('load', function () {
 
   setTimeout(() => {
     document.body.classList.add('animatable')
-  }, 300);
+  }, document.body.dataset.loaderTimer ? document.body.dataset.loaderTimer * 1 : 600);
 });
 
 window.addEventListener('resize', () => {

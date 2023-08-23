@@ -1,0 +1,41 @@
+.loader
+  .loader__logo
+    +icon-multi('loader-logo')
+
+style.
+  .loader {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    background-color: #fff;
+    opacity: 1;
+    visibility: visible;
+
+    transition: 0.3s;
+  }
+
+  .animatable .loader {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .loader__logo {
+    position: relative;
+
+    width: 15rem;
+    height: 5rem;
+  }
+
+  .loader__logo svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
