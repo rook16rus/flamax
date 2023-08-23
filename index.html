@@ -15,8 +15,53 @@
     <title>Главная | Flamax</title>
     <link rel="stylesheet" href="assets/css/style.min.css?v=0.0.0.0">
   </head>
-  <body class="page-home">
+  <body class="page-home" data-loader-timer="600">
     <div class="page-wrapper">
+      <div class="loader">
+        <div class="loader__logo">
+          <svg class="icon icon-loader-logo">
+            <use xlink:href="assets/images/sprites/sprite-multi.svg#loader-logo"></use>
+          </svg>
+        </div>
+      </div>
+      <style>
+        .loader {
+          position: fixed;
+          z-index: 100;
+          left: 0;
+          top: 0;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+
+          background-color: #fff;
+          opacity: 1;
+          visibility: visible;
+
+          transition: 0.3s;
+        }
+
+        .animatable .loader {
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        .loader__logo {
+          position: relative;
+
+          width: 15rem;
+          height: 5rem;
+        }
+
+        .loader__logo svg {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      </style>
 
       <main class="page-main main">
         <section class="intro page-section page-section--first js-intro-block" id="intro">
